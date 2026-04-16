@@ -1,0 +1,775 @@
+/* Reset básico */
+* { 
+  box-sizing: border-box; margin: 0; padding: 0; 
+-webkit-tap-highlight-color: transparent;
+}
+
+html, body { height: 100%; }
+
+body{
+  font-family: var(--font);
+  background: #ffacda; /* fallback por si algo falla */
+  overflow-x: hidden;
+}
+
+:root{
+  --font: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --bebas: "Bebas Neue", sans-serif;
+}
+
+
+/* Fondo fixed full-screen */
+.bg{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: url("../assets/bg-desktop-primeramusa.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* opcional: para que se sienta más pro en pantallas grandes */
+  transform: translateZ(0);
+}
+
+/* Cambia el fondo en celular */
+@media (max-width: 768px){
+  .bg{
+    background-image: url("../assets/bg-mobile-primeramusa.webp");
+  }
+}
+
+/* El contenido va encima y puede scrollear */
+.content{
+  position: relative;
+  z-index: 1;
+}
+
+
+:root{
+  --font: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+body{
+  font-family: var(--font);
+}
+
+/* Header fijo arriba */
+.site-header{
+  position: relative;
+  padding: 2.5vw;
+  z-index: 2;
+}
+
+
+/* Contenedor del nav */
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+/* Logo clickable */
+.logo{
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img{
+  height: 10vh;
+  width: auto;
+  display: block;
+}
+
+
+/* Links derecha */
+.nav-links{
+  display: inline-flex;
+  gap: 18px;
+}
+
+.nav-link{
+  color: #df2c52;
+  text-decoration: none;
+
+  font-weight: 700; /* bold */
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+/* hover sutil */
+.nav-link:hover{
+  opacity: 0.85;
+}
+
+/* placeholders de secciones (temporal) */
+.section-spacer{
+  height: 100vh; /* temporal para probar navegación */
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+/* HERO centrado pantalla */
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen del sencillo */
+.hero-cover{
+  max-width: min(520px, 90vw);
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px){
+
+  .site-header{
+  padding: 10vw 5vw 5vh 5vw;
+}
+
+  .nav{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .logo{
+    order: 1;
+  }
+
+  .nav-links{
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .logo img{
+    height: 10vh;
+  }
+
+  .nav-link{
+    font-size: 14px;
+  }
+
+}
+
+
+/* Loader full-screen */
+.loader{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+
+  background: #0b0b0b;
+
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 450ms ease, visibility 450ms ease;
+}
+
+.loader-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #fff;
+  animation: pulse 900ms ease-in-out infinite;
+}
+
+@keyframes pulse{
+  0%, 100% { transform: scale(1); opacity: .35; }
+  50% { transform: scale(1.9); opacity: 1; }
+}
+
+/* Estado cuando ya cargó */
+body.is-loaded .loader{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Sección plataformas */
+.platforms{
+  padding: 30px 20px 70px;
+  margin: 0 auto;
+}
+
+.platforms-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.platform-btn{
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.platform-btn:hover{
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.platform-btn img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+@media (max-width: 768px){
+  .platforms{
+    width: 100%;
+    padding: 20px 16px 30px;
+  }
+
+  .platforms-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .platform-btn{
+    width: auto;
+    height: auto;
+    flex: 0 0 auto;
+  }
+
+  .platform-btn img{
+    width: 15vw;
+    height: auto;
+    max-width: none;
+    display: block;
+  }
+
+  /* aquí puedes cambiar a iconos más compactos */
+  .platform-img--apple{
+    content: url("../assets/apple-music-icon.svg");
+  }
+
+  .platform-img--spotify{
+    content: url("../assets/spotify-icon.svg");
+  }
+
+  .platform-img--youtube{
+    content: url("../assets/youtube-icon.svg");
+  }
+
+  .platform-img--deezer{
+    content: url("../assets/deezer-icon.svg");
+  }
+
+  .platform-img--amazon{
+    content: url("../assets/amazon-music-icon.svg");
+  }
+}
+
+
+.yt-section{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+
+/* 16:9 responsive */
+.yt-player-wrap{
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 real */
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+}
+
+#yt-player{
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+/* Thumbs abajo */
+.yt-thumbs{
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.yt-thumb{
+  flex: 0 0 auto;
+  width: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.6;
+  transform: translateY(0);
+  transition: opacity 160ms ease, transform 160ms ease;
+  border: none;
+}
+
+.yt-thumb:hover{
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.yt-thumb.is-active{
+  opacity: 1;
+}
+
+.yt-thumb img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px){
+  .yt-section{
+    padding: 30px 16px 70px;
+  }
+  .yt-thumb{
+    width: 20vw; /* se siente grande en móvil */
+    max-width: 190px;
+  }
+}
+
+
+/* ===== Scroll horizontal thumbnails ===== */
+
+.yt-thumbs{
+  scrollbar-width: thin;                  /* Firefox */
+  scrollbar-color: #DF2C52 transparent;   /* handle rosado + fondo transparente */
+}
+
+/* Chrome / Edge / Safari */
+.yt-thumbs::-webkit-scrollbar{
+  height: 10px;
+}
+
+.yt-thumbs::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.yt-thumbs::-webkit-scrollbar-thumb{
+  background: #DF2C52;      /* rosado */
+  border-radius: 999px;
+}
+
+.yt-thumbs::-webkit-scrollbar-thumb:hover{
+  background: #DF2C52;
+}
+
+.yt-thumbs{
+  scroll-behavior: smooth;
+}
+
+.yt-thumb{
+  scroll-snap-align: start;
+}
+
+.yt-thumbs{
+  scroll-snap-type: x proximity;
+}
+
+
+.footer-wrap{
+  width: 95vw;
+  margin: 0 auto;
+  padding-bottom: 2.5vw;
+}
+
+.footer-grid{
+  display: grid;
+  grid-template-columns: 0.72fr 1.45fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.footer-card{
+  background: rgba(255, 255, 255, 0.30);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  min-height: 260px;
+}
+
+/* TARJETA IZQUIERDA */
+.footer-card--left{
+  padding: 42px 48px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer-mark{
+  font-family: var(--bebas);
+  font-size: clamp(54px, 5vw, 82px);
+  line-height: 0.9;
+  letter-spacing: 1px;
+  color: #DF2C52;
+  text-transform: uppercase;
+  margin: 0 0 28px;
+}
+
+.footer-social{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-social--left{
+  margin-bottom: 22px;
+}
+
+.footer-social a{
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-social a:hover{
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.footer-social img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.footer-copy{
+  color: #DF2C52;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+/* TARJETA DERECHA */
+.footer-card--right{
+  padding: 56px 58px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer-title{
+  margin: 0 0 18px;
+  font-family: var(--bebas);
+  font-size: clamp(44px, 3.3vw, 68px);
+  line-height: 0.92;
+  letter-spacing: 0.5px;
+  color: #DF2C52;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.footer-text{
+  margin: 0 0 28px;
+  max-width: 720px;
+  color: #DF2C52;
+  font-size: 18px;
+  line-height: 1.02;
+  font-weight: 400;
+}
+
+.footer-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 154px;
+  height: 54px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: #DF2C52;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-btn:hover{
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+/* responsive */
+@media (max-width: 1200px){
+  .footer-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .footer-card{
+    min-height: auto;
+  }
+
+  .footer-card--left,
+  .footer-card--right{
+    padding: 34px 28px;
+  }
+
+  .footer-text{
+    font-size: 20px;
+    line-height: 1.15;
+    max-width: 100%;
+  }
+
+  .footer-copy{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 640px){
+  .footer-wrap{
+    width: 92vw;
+    padding-bottom: 20px;
+  }
+
+  .footer-grid{
+    gap: 12px;
+  }
+
+  .footer-mark{
+    font-size: clamp(46px, 12vw, 70px);
+    margin-bottom: 24px;
+  }
+
+  .footer-title{
+    font-size: clamp(42px, 11vw, 64px);
+    margin-bottom: 14px;
+  }
+
+  .footer-text{
+    font-size: 14px;
+    line-height: 1.15;
+    margin-bottom: 22px;
+  }
+
+  .footer-btn{
+    height: 50px;
+    padding: 0 28px;
+    font-size: 18px;
+  }
+
+  .footer-social{
+    gap: 16px;
+  }
+
+  .footer-social a{
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer-copy{
+    font-size: 13px;
+  }
+
+   .footer-card--left{
+    order: 2;
+  }
+
+   .footer-card--right{
+    order: 1;
+  }
+}
+
+
+/* ===== Merch ===== */
+/* ===== Merch (Opción A: carrusel en TODAS las pantallas) ===== */
+.merch{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px 80px;
+}
+
+/* Carrusel siempre */
+.merch-grid{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 24%;        /* desktop: ~4 cards visibles */
+  gap: 18px;
+
+  overflow-x: auto;
+  padding-bottom: 12px;
+  -webkit-overflow-scrolling: touch;
+
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+}
+
+/* Card vidrio */
+.merch-card{
+  text-decoration: none;
+  color: #DF2C52;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  transform: translateY(0);
+  transition: transform 180ms ease, background 180ms ease, opacity 180ms ease;
+
+  scroll-snap-align: start; /* snap */
+}
+
+.merch-card:hover{
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.11);
+}
+
+/* Zona imagen */
+.merch-img{
+  height: 240px;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  margin: 30px 0;
+}
+
+.merch-img img{
+  max-width: 86%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+/* Texto abajo */
+.merch-meta{
+  padding: 14px 16px 16px;
+}
+
+.merch-name{
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.merch-price{
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* ===== Scroll horizontal merch (igual a yt-thumbs) ===== */
+.merch-grid{
+  scrollbar-width: thin;                /* Firefox */
+  scrollbar-color: #DF2C52 transparent; /* handle rosado + track transparente */
+}
+
+.merch-grid::-webkit-scrollbar{
+  height: 10px;
+}
+
+.merch-grid::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.merch-grid::-webkit-scrollbar-thumb{
+  background: #DF2C52;
+  border-radius: 999px;
+}
+
+.merch-grid::-webkit-scrollbar-thumb:hover{
+  background: #DF2C52;
+}
+
+/* Responsive: tablet */
+@media (max-width: 980px){
+  .merch-grid{
+    grid-auto-columns: 48%;  /* ~2 cards visibles */
+  }
+  .merch-img{ height: 220px; }
+}
+
+/* Responsive: mobile (tu look original) */
+@media (max-width: 768px){
+  .merch{
+    padding: 40px 10px 70px;
+  }
+
+  .merch-grid{
+    grid-auto-columns: 68%;
+    gap: 14px;
+    padding-bottom: 12px; /* para que la scrollbar respire */
+  }
+
+  .merch-img{
+    height: 200px;
+    margin: 5vh 0;
+    padding: 8px;
+  }
+
+  .merch-meta{
+    padding: 12px 14px 14px;
+  }
+}
+
+
+.fixed-side-btn{
+  position: fixed;
+  right: -5px;
+  top: 50svh;
+  transform: translateY(-50%);
+  z-index: 50;
+  display: block;
+  width: clamp(32px, 4vw, 138px);
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,0.28));
+  transition: transform 0.20s ease, right 0.20s ease, filter 0.28s ease;
+}
+
+.fixed-side-btn:hover{
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.fixed-side-btn img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px 0 0 16px;
+}
+
+/* móvil */
+@media (max-width: 700px){
+  .fixed-side-btn{
+    top: 80svh;          
+    width: clamp(52px, 10vw, 110px);
+  }
+
+  .fixed-side-btn img{
+    border-radius: 14px 0 0 14px;
+  }
+}

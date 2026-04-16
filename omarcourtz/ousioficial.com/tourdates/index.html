@@ -6,45 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b0b0b" />
 
-  <title>Omar Courtz Oficial | Música, Videos, Tour y Links</title>
+  <title>Omar Courtz Tour Dates | Fechas, Ciudades y Tickets Oficiales</title>
 
   <meta
     name="description"
-    content="Sitio oficial de Omar Courtz. Descubre su música, videos oficiales, fechas del tour y enlaces a todas las plataformas digitales."
+    content="Consulta las fechas del tour de Omar Courtz. Encuentra ciudades, venues y links oficiales para tickets de próximos shows."
   />
 
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Omar Courtz" />
-  <meta name="keywords" content="Omar Courtz, música, tour, canciones, videos, reggaeton, urbano, artista oficial" />
+  <meta
+    name="keywords"
+    content="Omar Courtz tour, Omar Courtz tickets, Omar Courtz fechas, conciertos Omar Courtz, tour dates, shows oficiales"
+  />
 
-  <link rel="canonical" href="https://www.ousioficial.com/" />
+  <link rel="canonical" href="https://www.ousioficial.com/tourdates" />
 
   <!-- ================= FAVICON ================= -->
-  <link rel="icon" type="image/png" href="assets/favicon_psmne.png" />
-  <link rel="apple-touch-icon" href="assets/favicon_psmne.png" />
+  <link rel="icon" type="image/png" href="../assets/favicon_psmne.png" />
+  <link rel="apple-touch-icon" href="../assets/favicon_psmne.png" />
 
   <!-- ================= OPEN GRAPH ================= -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Omar Courtz Oficial | Música, Videos, Tour y Links" />
+  <meta property="og:title" content="Omar Courtz Tour Dates | Fechas, Ciudades y Tickets Oficiales" />
   <meta
     property="og:description"
-    content="Explora el sitio oficial de Omar Courtz con acceso a su música, videos, tour y enlaces oficiales."
+    content="Consulta las fechas del tour de Omar Courtz y accede a links oficiales para tickets y detalles de cada show."
   />
-  <meta property="og:url" content="https://www.ousioficial.com/" />
+  <meta property="og:url" content="https://www.ousioficial.com/tourdates" />
   <meta property="og:site_name" content="Omar Courtz" />
   <meta property="og:locale" content="es_ES" />
 
   <meta property="og:image" content="https://www.ousioficial.com/assets/portadaPSMNE.jpg" />
   <meta property="og:image:width" content="512" />
   <meta property="og:image:height" content="512" />
-  <meta property="og:image:alt" content="Omar Courtz - sitio oficial" />
+  <meta property="og:image:alt" content="Omar Courtz Tour Dates" />
 
-  <!-- ================= TWITTER ================= -->
+  <!-- ================= TWITTER / X ================= -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Omar Courtz Oficial | Música, Videos, Tour y Links" />
+  <meta name="twitter:title" content="Omar Courtz Tour Dates | Fechas, Ciudades y Tickets Oficiales" />
   <meta
     name="twitter:description"
-    content="Explora el sitio oficial de Omar Courtz con acceso a su música, videos, tour y enlaces oficiales."
+    content="Consulta las fechas del tour de Omar Courtz y accede a links oficiales para tickets y detalles de cada show."
   />
   <meta name="twitter:image" content="https://www.ousioficial.com/assets/portadaPSMNE.jpg" />
 
@@ -62,7 +65,7 @@
   </style>
 
   <!-- ================= CSS ================= -->
-  <link rel="stylesheet" href="css/styles.css?v=1" />
+  <link rel="stylesheet" href="css/styles-tour.css?v=1" />
 
   <!-- ================= GOOGLE ANALYTICS ================= -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W06DZRRTJ1"></script>
@@ -78,17 +81,24 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "Omar Courtz",
-    "url": "https://www.ousioficial.com/",
-    "image": "https://www.ousioficial.com/assets/portadaPSMNE.jpg",
-    "sameAs": [
-      "https://open.spotify.com/artist/3E12tRURRvPfHz0hAMCFYc",
-      "https://music.apple.com/ar/artist/omar-courtz/1370744631",
-      "https://www.youtube.com/OMARCOURTZ"
-    ],
-    "genre": ["Reggaeton", "Urbano Latino"],
-    "description": "Sitio oficial de Omar Courtz con acceso a música, videos, tour y contenido oficial."
+    "@type": "CollectionPage",
+    "name": "Omar Courtz Tour Dates",
+    "url": "https://www.ousioficial.com/tourdates",
+    "description": "Página oficial con fechas del tour de Omar Courtz, ciudades, venues y enlaces oficiales para tickets.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Omar Courtz",
+      "url": "https://www.ousioficial.com/"
+    },
+    "about": {
+      "@type": "MusicGroup",
+      "name": "Omar Courtz",
+      "sameAs": [
+        "https://open.spotify.com/artist/3E12tRURRvPfHz0hAMCFYc",
+        "https://music.apple.com/ar/artist/omar-courtz/1370744631",
+        "https://www.youtube.com/OMARCOURTZ"
+      ]
+    }
   }
   </script>
 </head>
@@ -103,7 +113,14 @@
   <!-- Fondo fixed -->
   <div class="bg" aria-hidden="true"></div>
 
-  <!-- Menú -->
+    <!-- Contenido (scroll encima del fondo) -->
+
+<main class="tour-page" id="top">
+
+
+<section class="tour-hero-sticky">
+
+ <!-- Menú -->
   <header class="site-header">
   <nav class="nav">
 
@@ -113,9 +130,8 @@
     </div>
 
     <!-- centro -->
-    <a class="logo" href="https://ousioficial.com/" aria-label="Inicio">
-      <img src="assets/omarcourtz_logo.svg" alt="Omar Courtz" />
-    </a>
+    <div class="logo" aria-label="Inicio">
+    </div>
 
     <!-- derecha -->
     <div class="nav-right">
@@ -125,60 +141,38 @@
   </nav>
 </header>
 
-  <!-- Contenido (scroll encima del fondo) -->
+<div class="tour-hero-art">
+      <img
+        src="assets/BannerTour.webp"
+        alt="Omar Courtz Tour"
+        class="tour-hero-art__base"
+      >
 
-  <main class="content" id="top">
+    <video
+  class="tour-hero-art__video"
+  src="assets/Estrellas.mp4"
+  autoplay
+  muted
+  loop
+  playsinline
+></video>
+    </div>
 
 
-<section class="platforms" aria-label="Plataformas">
-  <div class="platforms-grid">
-    <a class="platform-btn" href="https://music.apple.com/ar/artist/omar-courtz/1370744631" target="_blank" rel="noopener noreferrer" aria-label="Abrir en Apple Music">
-      <img src="assets/apple-music.svg" alt="Apple Music" class="platform-img platform-img--apple">
-    </a>
+  </section>
 
-    <a class="platform-btn" href="https://open.spotify.com/artist/3E12tRURRvPfHz0hAMCFYc" target="_blank" rel="noopener noreferrer" aria-label="Abrir en Spotify">
-      <img src="assets/spotify.svg" alt="Spotify" class="platform-img platform-img--spotify">
-    </a>
+  <section class="tour-content">
+    <section class="tour-dates-section" id="tour-dates">
+      <div class="tour-dates-section__inner">
+        <!-- contenido fechas -->
 
-    <a class="platform-btn" href="https://www.youtube.com/OMARCOURTZ" target="_blank" rel="noopener noreferrer" aria-label="Abrir en YouTube Music">
-      <img src="assets/youtube.svg" alt="YouTube Music" class="platform-img platform-img--youtube">
-    </a>
-
-    <a class="platform-btn" href="https://www.deezer.com/mx/artist/14534981" target="_blank" rel="noopener noreferrer" aria-label="Abrir en Deezer">
-      <img src="assets/deezer.svg" alt="Deezer" class="platform-img platform-img--deezer">
-    </a>
-
-    <a class="platform-btn" href="https://music.amazon.com/es-co/artists/B07C3J6LFN/omar-courtz" target="_blank" rel="noopener noreferrer" aria-label="Abrir en Amazon Music">
-      <img src="assets/amazon-music.svg" alt="Amazon Music" class="platform-img platform-img--amazon">
-    </a>
-  </div>
+<section class="tour-section" id="tour-dates" aria-label="Tour dates">
+  <div class="tour-table" id="tourTable"></div>
 </section>
 
 
-
-<section class="albums-section" id="music">
-  <div class="albums-stage">
-
-    <a href="https://ousioficial.com/primeramusa/"
-       class="album-card album-card--left js-album"
-       aria-label="Abrir álbum 1">
-      <div class="album-card__inner">
-        <img src="assets/album-01.webp" alt="Portada álbum 1">
       </div>
-    </a>
-
-    <a href="https://ousioficial.com/porsimanananoestoy/"
-       class="album-card album-card--right js-album"
-       aria-label="Abrir álbum 2">
-      <div class="album-card__inner">
-        <img src="assets/album-02.webp" alt="Portada álbum 2">
-      </div>
-    </a>
-
-  </div>
-</section>
-
-</main>
+    </section>
 
 <footer id="merch" class="footer-wrap" aria-label="Footer">
   <div class="footer-grid">
@@ -221,17 +215,13 @@
 
   </div>
 </footer>
+ </section>
+
+</main>
 
 
-<a 
-  href="https://ousioficial.com/tourdates" 
-  class="fixed-side-btn" 
-  aria-label="Tour dates"
->
-  <img src="assets/tour-dates-btn.webp" alt="Tour Dates">
-</a>
 
   <script src="js/main.js?v=1"></script>
-  <script src="js/discos.js?v=1"></script>
+  <script src="js/dates.js?v=1"></script>
 </body>
 </html>
