@@ -584,6 +584,7 @@ body{
   width: 140px;
   display: flex;
   justify-content: flex-end;
+  
 }
 
 .tour-btn,
@@ -689,6 +690,7 @@ body{
   width: 140px;
   display: flex;
   justify-content: flex-end;
+  display: none;
 }
 
 @media (max-width: 640px){
