@@ -771,3 +771,55 @@ body.is-loaded .loader{
     border-radius: 14px 0 0 14px;
   }
 }
+
+
+/* Ocultar botón lateral en mobile */
+@media (max-width: 768px) {
+  .fixed-side-btn {
+    display: none;
+  }
+}
+
+
+/* Botón mobile (oculto por defecto) */
+.tour-btn-mobile {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.tour-btn-mobile img {
+  width: 65%;
+  max-width: 420px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover sutil */
+.tour-btn-mobile:hover img {
+  transform: translateY(-6px);
+}
+
+/* Activar solo en mobile */
+@media (max-width: 768px) {
+  .tour-btn-mobile {
+    display: flex;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .tour-btn-mobile img {
+    animation: floatBtn 2.5s ease-in-out infinite;
+  }
+}
+
+@keyframes floatBtn {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
