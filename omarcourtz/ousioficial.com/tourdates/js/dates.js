@@ -44,7 +44,7 @@
     },
     {
       date: "SEP 02",
-      city: "NATIONAL HARBOR, MD",
+      city: "WASHINGTON, DC",
       venue: "The Theater at MGM",
       status: "coming"
     },
