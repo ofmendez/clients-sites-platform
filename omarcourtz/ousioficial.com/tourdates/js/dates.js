@@ -4,28 +4,32 @@
       date: "AUG 19",
       city: "SAN JOSE, CA",
       venue: "San José Civic",
-      status: "coming",
+      status: "tickets",
+      url: "https://www.ticketmaster.com/event/1C00647A9B44A25E",
   bundleStatus: "inactive"
     },
     {
       date: "AUG 21",
       city: "INGLEWOOD, CA",
       venue: "YOUTUBE THEATER",
-      status: "coming",
+      status: "tickets",
+      url: "https://www.ticketmaster.com/event/0A006472A9B795F9",
   bundleStatus: "inactive"
     },
     {
       date: "AUG 22",
       city: "LAS VEGAS, NV",
       venue: "Fontainebleau Las Vegas",
-      status: "coming",
+      status: "tickets",
+      url: "https://www.ticketmaster.com/event/170064669A329A6B",
   bundleStatus: "inactive"
     },
     {
       date: "AUG 23",
       city: "SAN DIEGO, CA",
       venue: "Cal Coast Credit Union",
-      status: "coming",
+      status: "tickets",
+      url: "https://www.ticketmaster.com/event/0A006478F6F7CF5A",
   bundleStatus: "inactive"
     },
     {
