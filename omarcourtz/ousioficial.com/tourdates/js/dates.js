@@ -77,14 +77,16 @@
       date: "SEP 09",
       city: "BROOKLYN, NY",
       venue: "Barclays Center",
-      status: "coming",
+      status: "tickets",
+      url: "https://www.ticketmaster.com/event/30006479C4614783",
   bundleStatus: "inactive"
     },
     {
       date: "SEP 10",
       city: "READING, PA",
       venue: "Santander Arena",
-      status: "coming",
+      status: "tickets",
+      url: "https://www.ticketmaster.com/event/02006471D307D86F",
   bundleStatus: "inactive"
     },
     {
