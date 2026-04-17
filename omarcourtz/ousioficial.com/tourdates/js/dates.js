@@ -32,21 +32,24 @@
       date: "AUG 27",
       city: "HOUSTON, TX",
       venue: "713 Music Hall ",
-      status: "coming",
+      status: "tickets",
+      url: "https://www.ticketmaster.com/event/3A00648AA431A0EF",
   bundleStatus: "inactive"
     },
     {
       date: "AUG 28",
       city: "IRVING, TX",
       venue: "Toyota Music Factory",
-      status: "coming",
+      status: "tickets",
+      url: "https://www.ticketmaster.com/event/0C006489D9CFF0CC",
   bundleStatus: "inactive"
     },
     {
       date: "AUG 30",
       city: "ATLANTA, GA",
       venue: "Gas South Arena",
-      status: "coming",
+      status: "tickets",
+      url: "https://www.ticketmaster.com/event/0E006479E4D7F324",
   bundleStatus: "inactive"
     },
     {
@@ -128,13 +131,13 @@ function createBundleAction(item) {
   if (item.bundleStatus === "active" && item.bundleUrl) {
     return `
       <a class="tour-btn" href="${item.bundleUrl}" target="_blank" rel="noopener noreferrer" aria-label="Bundle para ${item.city}">
-        <span>BUNDLE</span>
+        <span>OUSI BUNDLE</span>
         <img class="tour-btn__arrow" src="assets/arrow-right.svg" alt="">
       </a>
     `;
   }
 
-  return `<span class="tour-status tour-status--coming">BUNDLE</span>`;
+  return `<span class="tour-status tour-status--coming">OUSI BUNDLE</span>`;
 }
 
 
