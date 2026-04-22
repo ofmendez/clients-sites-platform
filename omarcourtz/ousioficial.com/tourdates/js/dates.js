@@ -4,112 +4,115 @@
       date: "AUG 19",
       city: "SAN JOSE, CA",
       venue: "San José Civic",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/1C00647A9B44A25E",
+      status: "soldout",
   bundleStatus: "inactive"
     },
     {
       date: "AUG 21",
       city: "INGLEWOOD, CA",
       venue: "YOUTUBE THEATER",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/0A006472A9B795F9",
+      status: "soldout",
   bundleStatus: "inactive"
     },
     {
       date: "AUG 22",
       city: "LAS VEGAS, NV",
       venue: "Fontainebleau Las Vegas",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/170064669A329A6B",
+      status: "soldout",
   bundleStatus: "inactive"
     },
     {
       date: "AUG 23",
       city: "SAN DIEGO, CA",
       venue: "Cal Coast Credit Union",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/0A006478F6F7CF5A",
+      status: "soldout",
   bundleStatus: "inactive"
     },
     {
       date: "AUG 27",
       city: "HOUSTON, TX",
       venue: "713 Music Hall ",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/3A00648AA431A0EF",
+      status: "soldout",
   bundleStatus: "inactive"
     },
     {
       date: "AUG 28",
       city: "IRVING, TX",
       venue: "Toyota Music Factory",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/0C006489D9CFF0CC",
+      status: "soldout",
   bundleStatus: "inactive"
     },
     {
       date: "AUG 30",
       city: "ATLANTA, GA",
       venue: "Gas South Arena",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/0E006479E4D7F324",
+      status: "soldout",
   bundleStatus: "inactive"
     },
     {
       date: "SEP 02",
       city: "WASHINGTON, DC",
       venue: "The Theater at MGM",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/1500647EAE156D5F",
+      status: "soldout",
   bundleStatus: "inactive"
     },
     {
       date: "SEP 03",
       city: "BOSTON, MA",
       venue: "MGM Music Hall @ Fenway",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/010064799616B31D",
+      status: "soldout",
   bundleStatus: "inactive"
     },
     {
       date: "SEP 05",
       city: "CHICAGO, IL",
       venue: "Byline Bank Aragon Ballroom",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/04006479FCC9EA4B",
+      status: "soldout",
+  bundleStatus: "inactive"
+    }
+    ,
+    {
+      date: "SEP 08",
+      city: "BROOKLYN, NY",
+      venue: "Barclays Center",
+      status: "coming",
+      isNew: true,
   bundleStatus: "inactive"
     },
     {
       date: "SEP 09",
       city: "BROOKLYN, NY",
       venue: "Barclays Center",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/30006479C4614783",
+      status: "soldout",
   bundleStatus: "inactive"
     },
     {
       date: "SEP 10",
       city: "READING, PA",
       venue: "Santander Arena",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/02006471D307D86F",
+      status: "soldout",
+  bundleStatus: "inactive"
+    },
+    {
+      date: "SEP 11",
+      city: "MIAMI, FL",
+      venue: "Kaseya Center",
+      status: "coming",
+      isNew: true,
   bundleStatus: "inactive"
     },
     {
       date: "SEP 12",
       city: "MIAMI, FL",
       venue: "Kaseya Center",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/0D00648DA32E7370",
+      status: "soldout",
   bundleStatus: "inactive"
     },
     {
       date: "SEP 13",
       city: "ORLANDO, FL",
       venue: "Kia Center",
-      status: "tickets",
-      url: "https://www.ticketmaster.com/event/22006479AF455752",
+      status: "soldout",
   bundleStatus: "inactive"
     }
   ];
