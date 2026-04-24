@@ -75,7 +75,8 @@
       date: "SEP 08",
       city: "BROOKLYN, NY",
       venue: "Barclays Center",
-      status: "coming",
+      status: "tickets",
+      url: "https://www.ticketmaster.com/omar-courtz-por-si-manana-no-brooklyn-new-york-09-08-2026/event/3000649578B414BC?referrer=https%3A%2F%2Fwww.ticketmaster.com%2Fomar-courtz-tickets%2Fartist%2F3026340",
       isNew: true,
   bundleStatus: "inactive"
     },
@@ -97,7 +98,8 @@
       date: "SEP 11",
       city: "MIAMI, FL",
       venue: "Kaseya Center",
-      status: "coming",
+      status: "tickets",
+      url: "https://www.ticketmaster.com/omar-courtz-por-si-manana-no-miami-florida-09-11-2026/event/0D006494AAAD946F?referrer=https%3A%2F%2Fwww.ticketmaster.com%2Fomar-courtz-tickets%2Fartist%2F3026340",
       isNew: true,
   bundleStatus: "inactive"
     },
