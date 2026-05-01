@@ -121,7 +121,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5vh;
+  gap: 3.5vh;
   width: 100%;
 }
 
@@ -129,8 +129,8 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 15vw;
-  max-width: 250px;
+  width: 12vw;
+  max-width: 200px;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
@@ -255,7 +255,7 @@ body {
     margin-bottom: 5.5vh;
   }
 
-  .platforms {
+.platforms {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.2rem 1rem;
@@ -267,6 +267,12 @@ body {
 .platform-link {
   width: 80%;
   max-width: 180px;
+}
+
+/* 👇 Esto centra el último elemento */
+.platform-link:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
 }
 
   .socials {
