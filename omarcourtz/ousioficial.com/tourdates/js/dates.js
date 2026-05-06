@@ -10,28 +10,29 @@
     {
       date: "AUG 21",
       city: "INGLEWOOD, CA",
-      venue: "YOUTUBE THEATER",
-      status: "soldout",
-  bundleStatus: "inactive"
-    },
-    {
-      date: "AUG 22",
-      city: "LAS VEGAS, NV",
-      venue: "Fontainebleau Las Vegas",
+      venue: "KIA FORUM",
       status: "soldout",
   bundleStatus: "inactive"
     },
     {
       date: "AUG 23",
       city: "SAN DIEGO, CA",
-      venue: "Cal Coast Credit Union",
+      venue: "Viejas Arena",
       status: "soldout",
+  bundleStatus: "inactive"
+    },
+    {
+      date: "AUG 26",
+      city: "HIDALGO, TX",
+      venue: "Payne Arena",
+      status: "coming",
+      isNew: true,
   bundleStatus: "inactive"
     },
     {
       date: "AUG 27",
       city: "HOUSTON, TX",
-      venue: "713 Music Hall ",
+      venue: "Toyota Center",
       status: "soldout",
   bundleStatus: "inactive"
     },
@@ -52,7 +53,7 @@
     {
       date: "SEP 02",
       city: "WASHINGTON, DC",
-      venue: "The Theater at MGM",
+      venue: "CFG Arena",
       status: "soldout",
   bundleStatus: "inactive"
     },
@@ -66,7 +67,7 @@
     {
       date: "SEP 05",
       city: "CHICAGO, IL",
-      venue: "Byline Bank Aragon Ballroom",
+      venue: "United Center",
       status: "soldout",
   bundleStatus: "inactive"
     }
@@ -77,15 +78,14 @@
       venue: "Barclays Center",
       status: "tickets",
       url: "https://www.ticketmaster.com/omar-courtz-por-si-manana-no-brooklyn-new-york-09-08-2026/event/3000649578B414BC?referrer=https%3A%2F%2Fwww.ticketmaster.com%2Fomar-courtz-tickets%2Fartist%2F3026340",
-      isNew: true,
-  bundleStatus: "inactive"
+      bundleStatus: "inactive"
     },
     {
       date: "SEP 09",
       city: "BROOKLYN, NY",
       venue: "Barclays Center",
       status: "soldout",
-  bundleStatus: "inactive"
+      bundleStatus: "inactive"
     },
     {
       date: "SEP 10",
@@ -100,7 +100,6 @@
       venue: "Kaseya Center",
       status: "tickets",
       url: "https://www.ticketmaster.com/omar-courtz-por-si-manana-no-miami-florida-09-11-2026/event/0D006494AAAD946F?referrer=https%3A%2F%2Fwww.ticketmaster.com%2Fomar-courtz-tickets%2Fartist%2F3026340",
-      isNew: true,
   bundleStatus: "inactive"
     },
     {
@@ -116,7 +115,15 @@
       venue: "Kia Center",
       status: "soldout",
   bundleStatus: "inactive"
-    }
+    },
+    {
+      date: "SEP 19",
+      city: "ORLANDO, FL",
+      venue: "Kia Center",
+      status: "coming",
+      isNew: true,
+  bundleStatus: "inactive"
+    },
   ];
 
   function createTourAction(item) {
