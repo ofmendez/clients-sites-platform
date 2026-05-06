@@ -3,7 +3,7 @@
     {
       date: "AUG 19",
       city: "SAN JOSE, CA",
-      venue: "San José Civic",
+      venue: "SAP Center",
       status: "soldout",
   bundleStatus: "inactive"
     },
