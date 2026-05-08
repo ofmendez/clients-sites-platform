@@ -31,7 +31,8 @@ const tourDates = [
     date: "AUG 27",
     city: "HOUSTON, TX",
     venue: "Toyota Center",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.toyotacenter.com/events/detail/omar-courtz",
     labelStatus: "newvenue"
   },
   {
