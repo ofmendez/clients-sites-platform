@@ -3,28 +3,32 @@ const tourDates = [
     date: "AUG 19",
     city: "SAN JOSE, CA",
     venue: "SAP Center",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.ticketmaster.com/event/1C00649BDF13E1A6",
     labelStatus: "newvenue"
   },
   {
     date: "AUG 21",
     city: "INGLEWOOD, CA",
     venue: "KIA FORUM",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.ticketmaster.com/event/090064A584DA6A76",
     labelStatus: "newvenue"
   },
   {
     date: "AUG 23",
     city: "SAN DIEGO, CA",
     venue: "Viejas Arena",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.ticketmaster.com/event/0A00649E3CCDF809",
     labelStatus: "newvenue"
   },
   {
     date: "AUG 26",
     city: "HIDALGO, TX",
     venue: "Payne Arena",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.ticketmaster.com/event/3A00649E8EB39A55",
     labelStatus: "newdate"
   },
   {
