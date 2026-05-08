@@ -53,7 +53,8 @@ const tourDates = [
     date: "SEP 02",
     city: "WASHINGTON, DC",
     venue: "CFG Arena",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.ticketmaster.com/event/150064A2C0D8A6B7",
     labelStatus: "newvenue"
   },
   {
@@ -67,7 +68,8 @@ const tourDates = [
     date: "SEP 05",
     city: "CHICAGO, IL",
     venue: "United Center",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.ticketmaster.com/event/0400649EDE1DE3C2",
     labelStatus: "newvenue"
   },
   {
@@ -118,9 +120,10 @@ const tourDates = [
     date: "SEP 19",
     city: "ORLANDO, FL",
     venue: "Kia Center",
-    status: "coming",
-    labelStatus: "newdate"
-  },
+    status: "tickets",
+    url: "https://www.ticketmaster.com/event/2200649C96423A0B",
+    labelStatus: "newvenue"
+  }
 ];
 
 const labelMap = {
