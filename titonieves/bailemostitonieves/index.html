@@ -1,1 +1,136 @@
-.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+<title>Tito Nieves - Bailemos</title>
+
+<meta name="description" content="Escucha Bailemos, el nuevo sencillo de Tito Nieves. Disponible en todas las plataformas digitales." />
+
+<meta name="keywords" content="Tito Nieves, Bailemos, salsa, música latina, nuevo sencillo, Spotify, Apple Music" />
+
+<meta name="author" content="Tito Nieves" />
+
+<meta name="theme-color" content="#000000" />
+
+<link rel="canonical" href="https://bailemostitonieves.com/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bailemostitonieves.com/" />
+<meta property="og:title" content="Tito Nieves - Bailemos" />
+<meta property="og:description" content="Escucha Bailemos, el nuevo sencillo de Tito Nieves." />
+<meta property="og:image" content="https://bailemostitonieves.com/assets/images/cover-bailemos.jpg" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Tito Nieves - Bailemos" />
+<meta name="twitter:description" content="Escucha Bailemos, el nuevo sencillo de Tito Nieves." />
+<meta name="twitter:image" content="https://bailemostitonieves.com/assets/images/cover-bailemos.jpg" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192.png" />
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"/>
+
+
+
+</head>
+
+<body>
+  <main class="site">
+    <div class="video-wrapper">
+  <img
+    src="assets/images/fallback-bg.webp"
+    alt=""
+    class="video-fallback"
+    id="videoFallback"
+  />
+
+  <video
+    id="bgVideo"
+    class="bg-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  ></video>
+</div>
+
+    <div class="overlay"></div>
+
+    <section class="content">
+      <img
+  src="assets/images/logo-bailemos.svg"
+  alt="Tito Nieves - Bailemos"
+  class="logo"
+/>
+
+
+<aside class="listen-card" aria-label="Escuchar Bailemos en plataformas">
+  <div class="listen-card__info">
+    <img
+      src="assets/images/logo-bailemos-black.svg"
+      alt="Tito Nieves - Bailemos"
+      class="listen-card__logo"
+    />
+
+    <h2 class="listen-card__title">ESCÚCHALA EN:</h2>
+
+    <div class="platforms">
+      <a href="https://music.apple.com/us/album/bailemos-single/6767606746" class="platform-link" target="_blank"  aria-label="Apple Music">
+        <img src="assets/icons/apple-music.svg" alt="" />
+      </a>
+
+      <a href="https://open.spotify.com/track/62bwSXNBzLeGebnbZWJuLq?si=Ad7Dh7xvRAyQmZlKtnqXjQ" class="platform-link" target="_blank"  aria-label="Spotify">
+        <img src="assets/icons/spotify.svg" alt="" />
+      </a>
+
+      <a href="https://music.amazon.com/albums/B0H12KLYDG?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_WJEolSpisdwMufJp1iXH5ob7g&trackAsin=B0H12L17TK" class="platform-link" target="_blank"  aria-label="Amazon Music">
+        <img src="assets/icons/amazon-music.svg" alt="" />
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=B5zFX-wdAGY" class="platform-link" target="_blank"  aria-label="YouTube">
+        <img src="assets/icons/youtube.svg" alt="" />
+      </a>
+
+      <a href="https://www.deezer.com/en/track/4010030431" class="platform-link" target="_blank"  aria-label="Deezer">
+        <img src="assets/icons/deezer.svg" alt="" />
+      </a>
+
+      <a href="https://api.ffm.to/sl/e/c/bailemos?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiIsImJyb3dzZXIiOnsibmFtZSI6IkNocm9tZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI4ZDU5ZGFhOS03MDE1LTRhMjEtOTAyMi03ZWE1MjhmYWRlMmMiLCJzaWQiOiJlNzU0ZjQxYS1iYTA3LTQ2ODItYjczOS02YThkNmM4YTVjOTYiLCJpcCI6IjE4Ni4xNDcuMzIuNTciLCJyZWYiOiIiLCJob3N0IjoicmltYXNtdXNpYy5pbyIsImxhbmciOiJlbi1VUyIsImlwQ291bnRyeSI6IkNPIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IkNPIiwiaXNCb3QiOmZhbHNlLCJ1c2VBZmYiOiJvcmlnaW4iLCJ2aWQiOiIzNTY5MTYyMi1mODAzLTQxYzAtYmYwZC00MWYxMDg4ZTk1YWIiLCJpZCI6IjY5ZmI3OWFiMjcwMDAwYTQwMGJjZjE1MSIsInBydiI6ZmFsc2UsImlzUHJlUiI6ZmFsc2UsInR6byI6bnVsbCwiY2giOm51bGwsImFuIjpudWxsLCJkZXN0VXJsIjoiaHR0cHM6Ly9wYW5kb3JhLmFwcC5saW5rLz8kZGVza3RvcF91cmw9aHR0cHMlM0ElMkYlMkZ3d3cucGFuZG9yYS5jb20lMkZhcnRpc3QlMkZ0aXRvLW5pZXZlcyUyRmJhaWxlbW9zJTJGYmFpbGVtb3MlMkZUUjZncHB2ajU0Y2ZmNjkmJGlvc19kZWVwbGlua19wYXRoPXBhbmRvcmF2NCUzQSUyRiUyRmJhY2tzdGFnZSUyRnRyYWNrJTNGdG9rZW4lM0RUUiUzQTIwNDkwOTA2MyYkYW5kcm9pZF9kZWVwbGlua19wYXRoPXBhbmRvcmF2NCUzQSUyRiUyRmJhY2tzdGFnZSUyRnRyYWNrJTNGdG9rZW4lM0RUUiUzQTIwNDkwOTA2MyZ-Y2hhbm5lbD1QYXJ0bmVyJTIwQ2F0YWxvZyUyMFNlYXJjaCUyMEFQSSIsInNydmMiOiJwYW5kb3JhIiwicHJvZHVjdCI6InNtYXJ0bGluayIsInNob3J0SWQiOiJiYWlsZW1vcyIsImlzQXV0aG9yaXphdGlvblJlcXVpcmVkIjpmYWxzZSwib3duZXIiOiI1ZGRjMmQzNjMwMDAwMGZkMDBkZTgxMDAiLCJhciI6IjY4MjM0NGEzMjkwMDAwMTEwMGM2YWUwNSIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" class="platform-link" target="_blank"  aria-label="Pandora">
+        <img src="assets/icons/pandora.svg" alt="" />
+      </a>
+
+      <a href="https://tidal.com/album/522747669/track/522747678" class="platform-link" target="_blank"  aria-label="Tidal">
+        <img src="assets/icons/tidal.svg" alt="" />
+      </a>
+    </div>
+  </div>
+
+  <img
+    src="assets/images/cover-bailemos.jpg"
+    alt="Carátula de Bailemos"
+    class="listen-card__cover"
+  />
+</aside>
+
+
+
+    </section>
+  </main>
+
+  <a href="https://rimas.trusthub.com/privacy" class="privacy-link" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
