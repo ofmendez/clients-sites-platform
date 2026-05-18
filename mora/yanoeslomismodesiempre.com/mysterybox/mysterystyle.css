@@ -1,0 +1,163 @@
+/* =========================================================
+   RESET
+========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   BASE
+========================================================= */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Bebas Neue", sans-serif;
+  background: #050a1c;
+  color: #1338c8;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   LAYOUT GENERAL
+========================================================= */
+.mystery-page {
+  min-height: 100svh;
+  background: #050a1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: clamp(20px, 3vw, 40px);
+}
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+.countdown-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 2vw, 34px);
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.countdown__item {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(2px, 0.5vw, 8px);
+  line-height: 0.9;
+}
+
+.countdown__number {
+  font-size: clamp(56px, 11vw, 180px);
+  font-weight: 900;
+  letter-spacing: 0em;
+  color: #1338c8;
+  text-transform: uppercase;
+}
+
+.countdown__label {
+  font-size: clamp(56px, 11vw, 180px);
+  font-weight: 300;
+  letter-spacing: -0.06em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #1338c8;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   VIDEO
+========================================================= */
+.video-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mystery-video {
+  width: min(92vw, 1100px);
+  max-height: 56vh;
+  display: block;
+  object-fit: contain;
+  background: transparent;
+  mix-blend-mode: screen;
+}
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+.cta-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cta-button {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.cta-button img {
+  display: block;
+  width: min(250px, 30vw);
+  height: auto;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.cta-button:active {
+  transform: scale(0.98);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 768px) {
+  .mystery-page {
+    gap: 20px;
+    padding: 20px 14px 24px;
+  }
+
+  .countdown {
+    gap: 8px;
+  }
+
+  .countdown__item {
+    gap: 2px;
+  }
+
+  .countdown__number,
+  .countdown__label {
+    font-size: clamp(34px, 16vw, 82px);
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: 0.03rem;
+  }
+
+  .mystery-video {
+    width: 96vw;
+    max-height: 48vh;
+  }
+
+  .cta-button img {
+    width: min(240px, 40vw);
+  }
+}

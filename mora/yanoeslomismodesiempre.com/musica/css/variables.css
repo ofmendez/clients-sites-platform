@@ -1,0 +1,20 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --page-padding-x: 32px;
+  --page-padding-y: 28px;
+
+  --social-icon-size: 26px;
+  --badge-size: 84px;
+
+  --platform-width: 240px;
+  --platform-gap-x: 22px;
+  --platform-gap-y: 20px;
+
+  --transition-fast: 0.25s ease;
+
+  --z-base: 1;
+  --z-content: 2;
+  --z-social: 3;
+}
