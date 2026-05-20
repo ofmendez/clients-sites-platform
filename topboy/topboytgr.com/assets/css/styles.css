@@ -1,0 +1,454 @@
+:root {
+  --bg-desktop: url("../images/bg-desktop.webp");
+  --bg-mobile: url("../images/bg-mobile.webp");
+
+  --blue: #2a35ff;
+  --white: #ffffff;
+  --shadow-red: #3e0502;
+  --black: #050505;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background: var(--black);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+}
+
+.bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-image: var(--bg-desktop);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: repeat-y;
+
+  pointer-events: none;
+}
+
+.landing {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* LOGO */
+
+.song-logo {
+  position: absolute;
+  top: 2vh;
+  right: 4.5vw;
+  height: 28vh;
+  z-index: 10;
+  display: block;
+}
+
+/* COUNTDOWN */
+
+.countdown {
+  position: absolute;
+  top: 5.5vh;
+  left: 5.8vw;
+  z-index: 10;
+
+  font-family: "Permanent Marker", cursive;
+  font-size: clamp(28px, 3.7vw, 74px);
+  line-height: 1;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  text-shadow:
+    4px 4px 0 var(--shadow-red),
+    5px 5px 0 var(--shadow-red);
+  white-space: nowrap;
+}
+
+/* ARTISTS DESKTOP */
+
+.artists-stage {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  aspect-ratio: 1920 / 712;
+  z-index: 4;
+}
+
+.artist {
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  cursor: pointer;
+  transform-origin: bottom center;
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.artist:hover,
+.artist.is-active {
+  transform: scale(1.02);
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.25));
+}
+
+/* medidas desktop */
+.artist-topboy {
+  width: 31.2292%;
+  left: 0%;
+  z-index: 4;
+}
+
+.artist-sech {
+  width: 25.8125%;
+  left: 27.7604%;
+  z-index: 1;
+}
+
+.artist-myke {
+  width: 24.0417%;
+  left: 49.1667%;
+  z-index: 3;
+}
+
+.artist-eladio {
+  width: 26.75%;
+  left: 71.25%;
+  z-index: 4;
+}
+
+/* BUTTONS */
+
+.artist-btn {
+  position: absolute;
+  z-index: 20;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  min-width: 112px;
+  height: 36px;
+  padding: 0 18px;
+
+  border: 0;
+  border-radius: 999px;
+  background: var(--blue);
+  color: var(--white);
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.artist-btn img {
+  width: 13px;
+  height: 13px;
+  object-fit: contain;
+}
+
+.artist-btn:hover {
+  transform: translateY(-3px) scale(1.04);
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.35));
+}
+
+/* posiciones botones desktop */
+.btn-topboy {
+  left: 12.8%;
+  bottom: 12.1%;
+}
+
+.btn-sech {
+  left: 34.2%;
+  bottom: 12.1%;
+}
+
+.btn-myke {
+  left: 58.2%;
+  bottom: 12.1%;
+}
+
+.btn-eladio {
+  left: 80.2%;
+  bottom: 12.1%;
+}
+
+/* SOCIALS */
+
+.socials {
+  position: fixed;
+  left: 1.5vw;
+  bottom: 1.5vw;
+  z-index: 30;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.socials a:hover {
+  transform: translateY(-3px) scale(1.08);
+  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.35));
+}
+
+.socials img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* MOBILE HIDDEN ON DESKTOP */
+
+.mobile-artists {
+  display: none;
+}
+
+
+
+/* =========================
+   PRIVACY LINK
+========================= */
+
+.privacy-link {
+  position: fixed;
+  right: clamp(18px, 2vw, 34px);
+  bottom: clamp(18px, 2vw, 26px);
+
+  z-index: 120;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(10px, 0.72vw, 12px);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+
+  color: #fff;
+  text-decoration: none;
+
+  transition:
+    opacity 0.25s ease,
+    color 0.25s ease,
+    text-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+
+/* MOBILE */
+
+@media (orientation: portrait) {
+  html,
+  body {
+    min-height: 100%;
+    background-image: var(--bg-mobile);
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: repeat-y;
+  }
+
+  .landing {
+    min-height: 100svh;
+    overflow: visible;
+  }
+
+  .bg-layer {
+    display: none;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding-bottom: 16px;
+  }
+
+  .song-logo {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 45vw;
+    height: auto;
+    max-width: 420px;
+    margin-top: 2vh;
+    z-index: 10;
+  }
+
+  .countdown {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 3.5vw;
+    margin-bottom: 3vh;
+    z-index: 10;
+
+    text-align: center;
+    font-size: clamp(28px, 8.1vw, 54px);
+    text-shadow:
+      3px 3px 0 var(--shadow-red),
+      4px 4px 0 var(--shadow-red);
+  }
+
+  .desktop-artists {
+    display: none;
+  }
+
+  .mobile-artists {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    margin-top: 2vw;
+  }
+
+  .mobile-artists-row {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1080 / 640;
+  }
+
+  .mobile-artists-row + .mobile-artists-row {
+    margin-top: 5vh;
+  }
+
+  .mobile-artists-row .artist {
+    bottom: 0;
+  }
+
+  /* Mobile fila 1 */
+  .mobile-topboy {
+    width: 53.0556%;
+    left: 4.0741%;
+    z-index: 3;
+  }
+
+  .mobile-sech {
+    width: 44.4444%;
+    left: 51.4815%;
+    z-index: 1;
+  }
+
+  /* Mobile fila 2 */
+  .mobile-myke {
+    width: 41.5741%;
+    left: 8.3333%;
+    z-index: 1;
+  }
+
+  .mobile-eladio {
+    width: 45.9259%;
+    left: 45.6481%;
+    z-index: 3;
+  }
+
+  .artist:hover,
+  .artist.is-active {
+    transform: scale(1.04);
+  }
+
+  .artist-btn {
+    min-width: 88px;
+    height: 36px;
+    padding: 0 18px;
+    font-size: 14px;
+    gap: 4px;
+  }
+
+  .artist-btn img {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* posiciones botones mobile */
+  .mobile-btn-topboy {
+    left: 16%;
+    bottom: 8.5%;
+  }
+
+  .mobile-btn-sech {
+    left: 60%;
+    bottom: 8.5%;
+  }
+
+  .mobile-btn-myke {
+    left: 16%;
+    bottom: 8.5%;
+  }
+
+  .mobile-btn-eladio {
+    left: 60%;
+    bottom: 8.5%;
+  }
+
+  .socials {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  transform: none;
+
+  width: 100%;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+
+  justify-content: center;
+  gap: 18px;
+}
+
+.socials a {
+  width: 32px;
+  height: 32px;
+}
+
+.privacy-link {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  display: block;
+  opacity:1;
+  right: auto;
+  bottom: auto;
+  padding-bottom: 2.5vh;
+  font-size: 12px;
+}
+
+}
+
+
