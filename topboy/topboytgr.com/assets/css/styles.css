@@ -1,10 +1,8 @@
 :root {
-  --bg-desktop: url("../images/bg-desktop.webp");
-  --bg-mobile: url("../images/bg-mobile.webp");
+  --release-bg-desktop: url("../images/release-bg-desktop.webp");
+  --release-bg-mobile: url("../images/release-bg-mobile.webp");
 
-  --blue: #2a35ff;
   --white: #ffffff;
-  --shadow-red: #3e0502;
   --black: #050505;
 }
 
@@ -19,436 +17,231 @@ html,
 body {
   width: 100%;
   min-height: 100%;
-  background: var(--black);
-  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+
+  background: var(--black);
+
+  font-family: "Poppins", sans-serif;
 }
 
-button {
-  font-family: inherit;
-}
-
-.bg-layer {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-
-  background-image: var(--bg-desktop);
+body {
+  background-image: var(--release-bg-desktop);
   background-size: cover;
-  background-position: center top;
-  background-repeat: repeat-y;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
-  pointer-events: none;
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .landing {
   position: relative;
   width: 100%;
   min-height: 100svh;
-  overflow: hidden;
 }
 
-.hero {
+/* =========================================================
+RELEASE LAYOUT
+========================================================= */
+
+.release-layout {
   position: relative;
-  z-index: 2;
+
   width: 100%;
   min-height: 100svh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  padding: 4vw;
 }
 
-/* LOGO */
+.release-cover {
+  width: min(28vw, 360px);
 
-.song-logo {
-  position: absolute;
-  top: 2vh;
-  right: 4.5vw;
-  height: 28vh;
-  z-index: 10;
-  display: block;
+  border-radius: 14px;
+
+  box-shadow:
+    0 24px 40px rgba(0,0,0,0.32);
 }
 
-/* COUNTDOWN */
+/* =========================================================
+PLATFORMS
+========================================================= */
 
-.countdown {
-  position: absolute;
-  top: 5.5vh;
-  left: 5.8vw;
-  z-index: 10;
-
-  font-family: "Permanent Marker", cursive;
-  font-size: clamp(28px, 3.7vw, 74px);
-  line-height: 1;
-  color: var(--white);
-  letter-spacing: 0.04em;
-  text-shadow:
-    4px 4px 0 var(--shadow-red),
-    5px 5px 0 var(--shadow-red);
-  white-space: nowrap;
-}
-
-/* ARTISTS DESKTOP */
-
-.artists-stage {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+.platforms {
   width: 100%;
-  aspect-ratio: 1920 / 712;
-  z-index: 4;
-}
+  max-width: 980px;
 
-.artist {
-  position: absolute;
-  bottom: 0;
-  height: auto;
-  cursor: pointer;
-  transform-origin: bottom center;
-  transition:
-    transform 0.35s ease,
-    filter 0.35s ease;
-  user-select: none;
-  -webkit-user-drag: none;
-}
+  margin-top: 3vw;
 
-.artist:hover,
-.artist.is-active {
-  transform: scale(1.02);
-  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.25));
-}
-
-/* medidas desktop */
-.artist-topboy {
-  width: 31.2292%;
-  left: 0%;
-  z-index: 4;
-}
-
-.artist-sech {
-  width: 25.8125%;
-  left: 27.7604%;
-  z-index: 1;
-}
-
-.artist-myke {
-  width: 24.0417%;
-  left: 49.1667%;
-  z-index: 3;
-}
-
-.artist-eladio {
-  width: 26.75%;
-  left: 71.25%;
-  z-index: 4;
-}
-
-/* BUTTONS */
-
-.artist-btn {
-  position: absolute;
-  z-index: 20;
-
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
 
-  min-width: 112px;
-  height: 36px;
-  padding: 0 18px;
+  gap: clamp(28px, 5vw, 90px);
+}
 
-  border: 0;
-  border-radius: 999px;
-  background: var(--blue);
-  color: var(--white);
+.platform-image-btn {
+  width: clamp(150px, 14vw, 210px);
 
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   transition:
     transform 0.25s ease,
     filter 0.25s ease;
 }
 
-.artist-btn img {
-  width: 13px;
-  height: 13px;
-  object-fit: contain;
+.platform-image-btn:hover {
+  transform: translateY(-3px) scale(1.035);
+
+  filter:
+    brightness(1.08)
+    drop-shadow(0 10px 18px rgba(0,0,0,0.28));
 }
 
-.artist-btn:hover {
-  transform: translateY(-3px) scale(1.04);
-  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.35));
+.platform-image-btn img {
+  width: 100%;
+  height: auto;
 }
 
-/* posiciones botones desktop */
-.btn-topboy {
-  left: 12.8%;
-  bottom: 12.1%;
-}
+/* =========================================================
+SOCIALS
+========================================================= */
 
-.btn-sech {
-  left: 34.2%;
-  bottom: 12.1%;
-}
+.release-socials {
+  position: absolute;
+  left: 50%;
+  bottom: 46px;
 
-.btn-myke {
-  left: 58.2%;
-  bottom: 12.1%;
-}
+  transform: translateX(-50%);
 
-.btn-eladio {
-  left: 80.2%;
-  bottom: 12.1%;
-}
-
-/* SOCIALS */
-
-.socials {
-  position: fixed;
-  left: 1.5vw;
-  bottom: 1.5vw;
-  z-index: 30;
-
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.socials a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  transition: transform 0.25s ease, filter 0.25s ease;
+
+  gap: 18px;
 }
 
-.socials a:hover {
+.release-socials a {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.release-socials a:hover {
   transform: translateY(-3px) scale(1.08);
-  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.35));
+
+  filter:
+    drop-shadow(0 5px 8px rgba(0,0,0,0.35));
 }
 
-.socials img {
+.release-socials img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-/* MOBILE HIDDEN ON DESKTOP */
+/* =========================================================
+PRIVACY
+========================================================= */
 
-.mobile-artists {
-  display: none;
-}
+.release-privacy-link {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
 
+  transform: translateX(-50%);
 
-
-/* =========================
-   PRIVACY LINK
-========================= */
-
-.privacy-link {
-  position: fixed;
-  right: clamp(18px, 2vw, 34px);
-  bottom: clamp(18px, 2vw, 26px);
-
-  z-index: 120;
-
-  font-family: "Montserrat", sans-serif;
-  font-size: clamp(10px, 0.72vw, 12px);
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.04em;
 
-  color: #fff;
-  text-decoration: none;
+  color: var(--white);
+
+  opacity: 0.9;
 
   transition:
     opacity 0.25s ease,
-    color 0.25s ease,
-    text-shadow 0.25s ease,
     transform 0.25s ease;
 }
 
+.release-privacy-link:hover {
+  opacity: 1;
 
+  transform:
+    translateX(-50%)
+    translateY(-2px);
+}
 
-/* MOBILE */
+/* =========================================================
+MOBILE
+========================================================= */
 
 @media (orientation: portrait) {
+
   html,
   body {
-    min-height: 100%;
-    background-image: var(--bg-mobile);
-    background-size: 100% auto;
+    background-image: var(--release-bg-mobile);
+    background-size: cover;
     background-position: center top;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
   }
 
-  .landing {
-    min-height: 100svh;
-    overflow: visible;
+  .release-layout {
+    padding:
+      10vw
+      7vw
+      7vw;
   }
 
-  .bg-layer {
-    display: none;
-  }
-
-  .hero {
-    min-height: 100svh;
-    padding-bottom: 16px;
-  }
-
-  .song-logo {
-    position: relative;
-    top: auto;
-    right: auto;
-    width: 45vw;
-    height: auto;
+  .release-cover {
+    width: 72vw;
     max-width: 420px;
-    margin-top: 2vh;
-    z-index: 10;
   }
 
-  .countdown {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin-top: 3.5vw;
-    margin-bottom: 3vh;
-    z-index: 10;
+  .platforms {
+    margin-top: 8vw;
 
-    text-align: center;
-    font-size: clamp(28px, 8.1vw, 54px);
-    text-shadow:
-      3px 3px 0 var(--shadow-red),
-      4px 4px 0 var(--shadow-red);
+    flex-direction: column;
+
+    gap: 2vh;
   }
 
-  .desktop-artists {
-    display: none;
+  .platform-image-btn {
+    width: 50vw;
   }
 
-  .mobile-artists {
-    display: block;
-    position: relative;
-    width: 100%;
-    z-index: 5;
-    margin-top: 2vw;
+  .release-socials {
+    bottom: 48px;
   }
 
-  .mobile-artists-row {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1080 / 640;
+  .release-socials a {
+    width: 32px;
+    height: 32px;
   }
 
-  .mobile-artists-row + .mobile-artists-row {
-    margin-top: 5vh;
+  .release-privacy-link {
+    bottom: 22px;
+    font-size: 12px;
   }
-
-  .mobile-artists-row .artist {
-    bottom: 0;
-  }
-
-  /* Mobile fila 1 */
-  .mobile-topboy {
-    width: 53.0556%;
-    left: 4.0741%;
-    z-index: 3;
-  }
-
-  .mobile-sech {
-    width: 44.4444%;
-    left: 51.4815%;
-    z-index: 1;
-  }
-
-  /* Mobile fila 2 */
-  .mobile-myke {
-    width: 41.5741%;
-    left: 8.3333%;
-    z-index: 1;
-  }
-
-  .mobile-eladio {
-    width: 45.9259%;
-    left: 45.6481%;
-    z-index: 3;
-  }
-
-  .artist:hover,
-  .artist.is-active {
-    transform: scale(1.04);
-  }
-
-  .artist-btn {
-    min-width: 88px;
-    height: 36px;
-    padding: 0 18px;
-    font-size: 14px;
-    gap: 4px;
-  }
-
-  .artist-btn img {
-    width: 14px;
-    height: 14px;
-  }
-
-  /* posiciones botones mobile */
-  .mobile-btn-topboy {
-    left: 16%;
-    bottom: 8.5%;
-  }
-
-  .mobile-btn-sech {
-    left: 60%;
-    bottom: 8.5%;
-  }
-
-  .mobile-btn-myke {
-    left: 16%;
-    bottom: 8.5%;
-  }
-
-  .mobile-btn-eladio {
-    left: 60%;
-    bottom: 8.5%;
-  }
-
-  .socials {
-  position: relative;
-  left: auto;
-  bottom: auto;
-  transform: none;
-
-  width: 100%;
-  margin-top: 2vw;
-  margin-bottom: 1vw;
-
-  justify-content: center;
-  gap: 18px;
-}
-
-.socials a {
-  width: 32px;
-  height: 32px;
-}
-
-.privacy-link {
-  position: relative;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  display: block;
-  opacity:1;
-  right: auto;
-  bottom: auto;
-  padding-bottom: 2.5vh;
-  font-size: 12px;
-}
 
 }
-
-
