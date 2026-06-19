@@ -1,10 +1,10 @@
 :root {
-  /*--button-width-desktop: 205px;
+  --button-width-desktop: 205px;
   --button-height-desktop: 45px;
-  --button-width-mobile: 40vw;*/
-  --button-width-desktop: 310px;
+  --button-width-mobile: 40vw;
+  /*--button-width-desktop: 310px;
   --button-height-desktop: 75px;
-  --button-width-mobile: 70vw;
+  --button-width-mobile: 70vw;*/
   --button-height-mobile: auto;
 }
 
