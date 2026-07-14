@@ -128,6 +128,14 @@ const tourDates = [
     status: "tickets",
     url: "https://www.ticketmaster.com/event/2200649C96423A0B",
     labelStatus: "newvenue"
+  },
+  {
+    date: "SEP 24",
+    city: "SAN JUAN, PR",
+    venue: "Coliseo de Puerto Rico",
+    status: "coming",
+    url: "https://www.ticketmaster.com/event/2200649C96423A0B",
+    labelStatus: "newdate"
   }
 ];
 
