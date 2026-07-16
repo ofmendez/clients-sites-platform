@@ -136,6 +136,14 @@ const tourDates = [
     status: "presale",
     url: "https://choli.ticketera.com/s/L6qyUwho",
     labelStatus: "newdate"
+  },
+  {
+    date: "SEP 25",
+    city: "SAN JUAN, PR",
+    venue: "Coliseo de Puerto Rico",
+    status: "presale",
+    url: "https://choli.ticketera.com/event/6a58f38d1a5773026cddee1a/6a58f38d1a5773026cddee65",
+    labelStatus: "newdate"
   }
 ];
 
