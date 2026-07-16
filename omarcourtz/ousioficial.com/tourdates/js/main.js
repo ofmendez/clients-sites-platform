@@ -34,7 +34,6 @@ window.addEventListener("load", async () => {
 
 (() => {
   const popup = document.getElementById("tourPopup");
-
   if (!popup) return;
 
   const closeButtons = popup.querySelectorAll("[data-popup-close]");
@@ -43,16 +42,29 @@ window.addEventListener("load", async () => {
   const storageKey = "omarTourPopupLastSeen";
   const ONE_DAY = 24 * 60 * 60 * 1000;
 
-  function canShowPopup() {
-    const lastSeen = localStorage.getItem(storageKey);
-
-    if (!lastSeen) {
-      return true;
+  function getLastSeen() {
+    try {
+      return Number(localStorage.getItem(storageKey)) || 0;
+    } catch (error) {
+      console.warn("No se pudo leer localStorage:", error);
+      return 0;
     }
+  }
 
-    const elapsedTime = Date.now() - Number(lastSeen);
+  function saveLastSeen() {
+    try {
+      localStorage.setItem(storageKey, Date.now().toString());
+    } catch (error) {
+      console.warn("No se pudo guardar en localStorage:", error);
+    }
+  }
 
-    return elapsedTime >= ONE_DAY;
+  function canShowPopup() {
+    const lastSeen = getLastSeen();
+
+    if (!lastSeen) return true;
+
+    return Date.now() - lastSeen >= ONE_DAY;
   }
 
   function openPopup() {
@@ -68,20 +80,14 @@ window.addEventListener("load", async () => {
     popup.setAttribute("aria-hidden", "true");
     document.body.classList.remove("popup-open");
 
-    localStorage.setItem(storageKey, Date.now().toString());
+    saveLastSeen();
   }
 
   closeButtons.forEach((button) => {
     button.addEventListener("click", closePopup);
   });
 
-  subscribeButton?.addEventListener("click", () => {
-    localStorage.setItem(storageKey, Date.now().toString());
-
-    popup.classList.remove("is-visible");
-    popup.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("popup-open");
-  });
+  subscribeButton?.addEventListener("click", closePopup);
 
   document.addEventListener("keydown", (event) => {
     if (
@@ -92,7 +98,5 @@ window.addEventListener("load", async () => {
     }
   });
 
-  window.addEventListener("load", () => {
-    window.setTimeout(openPopup, 1500);
-  });
+  window.setTimeout(openPopup, 1500);
 })();
