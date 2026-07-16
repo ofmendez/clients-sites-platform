@@ -133,8 +133,8 @@ const tourDates = [
     date: "SEP 24",
     city: "SAN JUAN, PR",
     venue: "Coliseo de Puerto Rico",
-    status: "coming",
-    url: "https://www.ticketmaster.com/event/2200649C96423A0B",
+    status: "presale",
+    url: "https://choli.ticketera.com/s/L6qyUwho",
     labelStatus: "newdate"
   }
 ];
@@ -163,20 +163,44 @@ function createTourLabel(item) {
 }
 
 function createTourAction(item) {
-  if (item.status === "tickets" && item.url) {
+  if (["tickets", "presale"].includes(item.status) && item.url) {
+    const buttonText = item.status === "presale" ? "PRE-SALE" : "TICKETS";
+    const ariaText =
+      item.status === "presale"
+        ? `Preventa para ${item.city}`
+        : `Tickets para ${item.city}`;
+
     return `
-      <a class="tour-btn" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="Tickets para ${item.city}">
-        <span>TICKETS</span>
-        <img class="tour-btn__arrow" src="assets/arrow-right.svg" alt="">
+      <a
+        class="tour-btn"
+        href="${item.url}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="${ariaText}"
+      >
+        <span>${buttonText}</span>
+        <img
+          class="tour-btn__arrow"
+          src="assets/arrow-right.svg"
+          alt=""
+        >
       </a>
     `;
   }
 
   if (item.status === "soldout") {
-    return `<span class="tour-status tour-status--soldout">SOLD OUT</span>`;
+    return `
+      <span class="tour-status tour-status--soldout">
+        SOLD OUT
+      </span>
+    `;
   }
 
-  return `<span class="tour-status tour-status--coming">COMING SOON</span>`;
+  return `
+    <span class="tour-status tour-status--coming">
+      COMING SOON
+    </span>
+  `;
 }
 
 function renderTourDates() {
