@@ -140,8 +140,15 @@ const tourDates = [
     date: "SEP 25",
     city: "SAN JUAN, PR",
     venue: "Coliseo de Puerto Rico",
+    status: "soldout",
+    labelStatus: "soldout"
+  },
+  {
+    date: "SEP 26",
+    city: "SAN JUAN, PR",
+    venue: "Coliseo de Puerto Rico",
     status: "presale",
-    url: "https://choli.ticketera.com/event/6a58f38d1a5773026cddee1a/6a58f38d1a5773026cddee65",
+    url: "https://choli.ticketera.com/event/omar-courtz-por-si-manana-no-estoy-f4ld9y",
     labelStatus: "newdate"
   }
 ];
