@@ -147,7 +147,7 @@ const tourDates = [
     date: "SEP 26",
     city: "SAN JUAN, PR",
     venue: "Coliseo de Puerto Rico",
-    status: "presale",
+    status: "tickets",
     url: "https://choli.ticketera.com/event/omar-courtz-por-si-manana-no-estoy-f4ld9y",
     labelStatus: "newdate"
   }
