@@ -1,0 +1,431 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.page {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  background-image: url("./assets/bg-desktop.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+/* Pantallas verticales */
+@media (orientation: portrait) {
+  .page {
+    background-image: url("./assets/bg-mobile.webp");
+  }
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo-container {
+  position: absolute;
+
+  width: 60vw;
+  right: 0;
+  top: 5vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 10;
+}
+
+.logo {
+  display: block;
+
+  width: min(20vw, 500px);
+  height: auto;
+}
+
+/* ========================================
+   LINKS PLATAFORMAS
+======================================== */
+
+.platform-links {
+  margin-top: 5vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.platform-links a {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(18px, 1.7vw, 32px);
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: #ffd646;
+
+  text-decoration: none;
+  line-height: 1.15;
+
+  /* Separación entre caracteres */
+  letter-spacing: 0.02em;
+
+  /* Ensanchar ligeramente la tipografía */
+  transform: scaleX(1.3);
+
+  transform-origin: center;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.platform-links a:hover {
+  opacity: 0.7;
+  transform: scaleX(1.12) translateY(-2px);
+}
+
+
+/* ========================================
+   RUIDO / FILM GRAIN
+======================================== */
+
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: 100;
+
+  opacity: 0.07;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+
+  background-repeat: repeat;
+  background-size: 180px 180px;
+
+  mix-blend-mode: soft-light;
+}
+
+
+/* ========================================
+   PANTALLAS VERTICALES
+======================================== */
+
+@media (orientation: portrait) {
+
+  .logo-container {
+    width: 100%;
+    right: auto;
+    left: 0;
+
+    top: 5vh;
+
+    justify-content: center;
+  }
+
+  .logo {
+    width: 50vw;
+    max-width: 420px;
+  }
+
+  .platform-links {
+    margin-top: 6vh;
+    gap: 1rem;
+  }
+
+  .platform-links a {
+    font-size: clamp(18px, 5vw, 24px);
+  }
+
+}
+
+
+/* ========================================
+   IMÁGENES ESQUINA IZQUIERDA
+======================================== */
+
+.corner-image {
+  position: absolute;
+  left: 0;
+
+  display: block;
+  height: auto;
+
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Superior izquierda */
+.corner-image-top {
+  top: 10px;
+  left: 10px;
+  width: 8vw;
+}
+
+/* Inferior izquierda */
+.corner-image-bottom {
+  bottom: 10px;
+  left: 10px;
+  width: 8vw;
+}
+
+
+/* ========================================
+   MOBILE / PANTALLAS VERTICALES
+======================================== */
+
+@media (orientation: portrait) {
+
+  .corner-image-top {
+    width: 25vw;
+  }
+
+  .corner-image-bottom {
+    width: 25vw;
+  }
+
+}
+
+
+
+/* ========================================
+   STICKERS
+======================================== */
+
+.sticker {
+  position: absolute;
+
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+
+  height: auto;
+  display: block;
+
+  z-index: 8;
+  pointer-events: none;
+}
+
+
+/* ========================================
+   STICKERS — DESKTOP
+======================================== */
+
+.sticker-01 {
+  --x: 45vw;
+  --y: 10vh;
+  --size: 10vw;
+}
+
+.sticker-02 {
+  --x: 85vw;
+  --y: 15vh;
+  --size: 12vw;
+}
+
+.sticker-03 {
+  --x: 40vw;
+  --y: 40vh;
+  --size: 10vw;
+}
+
+.sticker-04 {
+  --x: 70vw;
+  --y: 68vh;
+  --size: 11vw;
+}
+
+.sticker-05 {
+  --x: 50vw;
+  --y: 68vh;
+  --size: 13vw;
+}
+
+.sticker-06 {
+  --x: 82vw;
+  --y: 48vh;
+  --size: 9vw;
+}
+
+
+/* ========================================
+   STICKERS — MOBILE
+======================================== */
+
+@media (orientation: portrait) {
+
+  .sticker-01 {
+    --x: 5vw;
+    --y: 20vh;
+    --size: 22vw;
+  }
+
+  .sticker-02 {
+    --x: 70vw;
+    --y: 5vh;
+    --size: 25vw;
+  }
+
+  .sticker-03 {
+    --x: 8vw;
+    --y: 42vh;
+    --size: 25vw;
+  }
+
+  .sticker-04 {
+    --x: 70vw;
+    --y: 27vh;
+    --size: 25vw;
+  }
+
+  .sticker-05 {
+    --x: 65vw;
+    --y: 48vh;
+    --size: 32vw;
+  }
+
+  .sticker-06 {
+    --x: 70vw;
+    --y: 75vh;
+    --size: 22vw;
+  }
+
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer-center {
+  position: absolute;
+
+  left: 50%;
+  bottom: 2vw;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+
+  z-index: 20;
+}
+
+
+/* REDES */
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: opacity 0.2s ease;
+}
+
+.social-links a:hover {
+  opacity: 0.6;
+}
+
+.social-links img {
+  width: 1.2vw;
+  height: 1.2vw;
+
+  object-fit: contain;
+  display: block;
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+  font-family: "Anton", sans-serif;
+  font-size: 0.8vw;
+  letter-spacing: 0.06em;
+
+  color: #fff;
+
+  white-space: nowrap;
+}
+
+
+/* PRIVACY */
+
+.privacy-link {
+  position: absolute;
+
+  right: 2vw;
+  bottom: 2vw;
+
+  font-family: "Anton", sans-serif;
+  font-size: 0.8vw;
+  letter-spacing: 0.06em;
+
+  color: #fff;
+  text-decoration: none;
+
+  z-index: 20;
+
+  transition: opacity 0.2s ease;
+}
+
+.privacy-link:hover {
+  opacity: 0.6;
+}
+
+
+@media (orientation: portrait) {
+
+  .footer-center {
+    bottom: 5vw;
+    gap: 3vw;
+  }
+
+  .social-links {
+    gap: 2.5vw;
+  }
+
+  .social-links img {
+    width: 4.5vw;
+    height: 4.5vw;
+  }
+
+  .copyright {
+    font-size: 3vw;
+  }
+
+  .privacy-link {
+    right: 5vw;
+    bottom: 5vw;
+
+    font-size: 3vw;
+  }
+
+}

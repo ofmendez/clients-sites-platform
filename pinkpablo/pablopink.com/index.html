@@ -1,60 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMING SOON</title>
+  <meta charset="UTF-8">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
 
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-        }
+  <!-- SEO -->
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #000;
-            color: #fff;
-            font-family: Arial, Helvetica, sans-serif;
-            overflow: hidden;
-        }
+  <title>Pink Pablo | PINK LEMONADE</title>
 
-        h1 {
-            font-size: clamp(2.5rem, 4vw, 6rem);
-            font-weight: 300;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            animation: fade 4s ease-in-out infinite;
-            user-select: none;
-        }
+  <meta
+    name="description"
+    content="Escucha PINK LEMONADE, el nuevo álbum de Pink Pablo, disponible en plataformas digitales."
+  >
 
-        @keyframes fade {
-    0% {
-        opacity: 1;
+  <meta
+    name="keywords"
+    content="Pink Pablo, PINK LEMONADE, Pink Pablo PINK LEMONADE, nuevo álbum, música, Spotify, Amazon Music, Apple Music"
+  >
+
+  <meta name="author" content="Pink Pablo">
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://pablopink.com/"
+  >
+
+
+  <!-- OPEN GRAPH -->
+
+  <meta property="og:type" content="music.album">
+
+  <meta
+    property="og:title"
+    content="Pink Pablo | PINK LEMONADE"
+  >
+
+  <meta
+    property="og:description"
+    content="Escucha PINK LEMONADE, el nuevo álbum de Pink Pablo, disponible en plataformas digitales."
+  >
+
+  <meta
+    property="og:url"
+    content="https://pablopink.com/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://pablopink.com/assets/og-image.jpg"
+  >
+
+  <meta
+    property="og:image:secure_url"
+    content="https://pablopink.com/assets/og-image.jpg"
+  >
+
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+
+  <meta
+    property="og:image:alt"
+    content="PINK LEMONADE, nuevo álbum de Pink Pablo"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Pink Pablo | PINK LEMONADE"
+  >
+
+  <meta property="og:locale" content="es_LA">
+
+
+  <!-- X / TWITTER -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Pink Pablo | PINK LEMONADE"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Escucha PINK LEMONADE, el nuevo álbum de Pink Pablo, disponible en plataformas digitales."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://pablopink.com/assets/og-image.jpg"
+  >
+
+  <meta
+    name="twitter:image:alt"
+    content="PINK LEMONADE, nuevo álbum de Pink Pablo"
+  >
+
+
+  <!-- FAVICON -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./assets/favicon-32.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="./assets/favicon-192.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./assets/apple-touch-icon.png"
+  >
+
+  <link
+    rel="shortcut icon"
+    href="./assets/favicon.png"
+  >
+
+
+  <!-- COLOR DEL NAVEGADOR -->
+
+  <meta name="theme-color" content="#ffd646">
+
+
+  <!-- FUENTE ANTON -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- PRELOAD -->
+
+  <link
+    rel="preload"
+    as="image"
+    href="./assets/bg-desktop.webp"
+    media="(orientation: landscape)"
+  >
+
+  <link
+    rel="preload"
+    as="image"
+    href="./assets/bg-mobile.webp"
+    media="(orientation: portrait)"
+  >
+
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="./style.css">
+
+
+  <!-- SCHEMA -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicAlbum",
+    "name": "Pink Lemonade",
+    "url": "https://pablopink.com/",
+    "image": "https://pablopink.com/assets/og-image.jpg",
+    "inLanguage": "es",
+    "byArtist": {
+      "@type": "MusicGroup",
+      "name": "Pink Pablo"
     }
+  }
+  </script>
 
-    50% {
-        opacity: 0.2;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-    </style>
 </head>
+
 <body>
 
-    <h1>Coming Soon</h1>
+  <main class="page">
+    
 
+            <!-- Imagen esquina superior izquierda -->
+  <img
+    src="./assets/top-left.svg"
+    alt=""
+    class="corner-image corner-image-top"
+  >
+
+  <!-- Imagen esquina inferior izquierda -->
+  <img
+    src="./assets/bottom-left.webp"
+    alt=""
+    class="corner-image corner-image-bottom"
+  >
+
+
+  <div class="logo-container">
+
+  <img
+    src="./assets/logo.svg"
+    alt="Pink Lemonade"
+    class="logo"
+  >
+
+  <nav class="platform-links">
+    <a href="https://open.spotify.com/album/0Zv6IMPprJQeSqKsMpCVLq?si=jV_se7HGTlKshQUJVRPLag&utm_source=copy-link" target="_blank" rel="noopener noreferrer">
+      Spotify
+    </a>
+
+    <a href="https://music.apple.com/us/album/pink-lemonade/6796125473" target="_blank" rel="noopener noreferrer">
+      Apple Music
+    </a>
+
+    <a href="https://music.amazon.com/albums/B0HC5S62WC?ref=dm_sh_SZ8whvwfKTMrOfGCqKENwx8u7" target="_blank" rel="noopener noreferrer">
+      Amazon Music
+    </a>
+
+    <a href="https://www.youtube.com/playlist?list=PLW87BGiAhgzQ" target="_blank" rel="noopener noreferrer">
+      YouTube
+    </a>
+  </nav>
+
+</div>
+
+
+<div class="stickers">
+  <img src="./assets/sticker01.webp" class="sticker sticker-01" alt="">
+  <img src="./assets/sticker02.webp" class="sticker sticker-02" alt="">
+  <img src="./assets/sticker03.webp" class="sticker sticker-03" alt="">
+  <img src="./assets/sticker04.webp" class="sticker sticker-04" alt="">
+  <img src="./assets/sticker05.webp" class="sticker sticker-05" alt="">
+  <img src="./assets/sticker06.webp" class="sticker sticker-06" alt="">
+</div>
+
+
+<!-- Footer central -->
+<div class="footer-center">
+
+  <div class="social-links">
+    <a href="https://www.instagram.com/pinkpablopr/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <img src="./assets/instagram.svg" alt="">
+    </a>
+
+    <a href="https://www.tiktok.com/@pinkpablo" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+      <img src="./assets/tiktok.svg" alt="">
+    </a>
+  </div>
+
+</div>
+
+
+<!-- Privacy -->
+<a
+  class="privacy-link"
+  href="https://rimas.trusthub.com/privacy"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Privacy Policy
+</a>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
