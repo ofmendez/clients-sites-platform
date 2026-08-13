@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Katteyes | Shows</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      background: #0a0000;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: "Oswald", sans-serif;
+    }
+
+    .loading {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      animation: pulse 1.2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.25;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="loading">CARGANDO...</div>
+
+  <script>
+    window.location.href = "https://katteyes.dgmedios.com/";
+  </script>
+
+</body>
+</html>
