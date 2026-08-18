@@ -24,14 +24,6 @@ const tourDates = [
     labelStatus: "newvenue"
   },
   {
-    date: "AUG 26",
-    city: "HIDALGO, TX",
-    venue: "Payne Arena",
-    status: "tickets",
-    url: "https://www.ticketmaster.com/event/3A00649E8EB39A55",
-    labelStatus: "newdate"
-  },
-  {
     date: "AUG 27",
     city: "HOUSTON, TX",
     venue: "Toyota Center",
