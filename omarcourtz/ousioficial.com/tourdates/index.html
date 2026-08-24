@@ -65,7 +65,7 @@
   </style>
 
   <!-- ================= CSS ================= -->
-  <link rel="stylesheet" href="css/styles-tour.css?v=4" />
+  <link rel="stylesheet" href="css/styles-tour.css?v=10" />
 
   <!-- ================= GOOGLE ANALYTICS ================= -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W06DZRRTJ1"></script>
@@ -143,20 +143,50 @@
 
 <div class="tour-hero-art">
       <img
-        src="assets/BannerTour.webp"
+        src="assets/BannerTour_02.webp"
         alt="Omar Courtz Tour"
         class="tour-hero-art__base"
       >
 
-    <video
-  class="tour-hero-art__video"
-  src="assets/Estrellas.mp4"
-  autoplay
-  muted
-  loop
-  playsinline
-></video>
+    <div class="tour-hero-art__video-layer" aria-hidden="true">
+  <video
+    class="tour-hero-art__video"
+    src="assets/Estrellas.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  ></video>
+</div>
     </div>
+
+    
+     <div class="tour-tabs" role="tablist" aria-label="Tour regions">
+
+    <button
+      class="tour-tab is-active"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      data-tour-region="latam"
+    >
+      LATAM
+    </button>
+
+    <button
+      class="tour-tab"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      data-tour-region="usa"
+    >
+      USA
+    </button>
+
+    
+
+  </div>
 
 
   </section>
@@ -167,7 +197,9 @@
         <!-- contenido fechas -->
 
 <section class="tour-section" id="tour-dates" aria-label="Tour dates">
+
   <div class="tour-table" id="tourTable"></div>
+
 </section>
 
 
@@ -276,7 +308,7 @@
 </div>
 
 
-  <script src="js/main.js?v=26"></script>
-  <script src="js/dates.js?v=26"></script>
+  <script src="js/main.js?v=28"></script>
+  <script src="js/dates.js?v=28"></script>
 </body>
 </html>

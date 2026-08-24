@@ -1,27 +1,24 @@
-const tourDates = [
+const tourDatesUSA = [
   {
     date: "AUG 19",
     city: "SAN JOSE, CA",
     venue: "SAP Center",
-    status: "tickets",
-    url: "https://www.ticketmaster.com/event/1C00649BDF13E1A6",
-    labelStatus: "newvenue"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "AUG 21",
     city: "INGLEWOOD, CA",
     venue: "KIA FORUM",
-    status: "tickets",
-    url: "https://www.ticketmaster.com/event/090064A584DA6A76",
-    labelStatus: "newvenue"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "AUG 23",
     city: "SAN DIEGO, CA",
     venue: "Viejas Arena",
-    status: "tickets",
-    url: "https://www.ticketmaster.com/event/0A00649E3CCDF809",
-    labelStatus: "newvenue"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "AUG 27",
@@ -73,9 +70,8 @@ const tourDates = [
     date: "SEP 08",
     city: "BROOKLYN, NY",
     venue: "Barclays Center",
-    status: "tickets",
-    url: "https://www.ticketmaster.com/omar-courtz-por-si-manana-no-brooklyn-new-york-09-08-2026/event/3000649578B414BC?referrer=https%3A%2F%2Fwww.ticketmaster.com%2Fomar-courtz-tickets%2Fartist%2F3026340",
-    labelStatus: "lowtickets"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "SEP 09",
@@ -95,9 +91,8 @@ const tourDates = [
     date: "SEP 11",
     city: "MIAMI, FL",
     venue: "Kaseya Center",
-    status: "tickets",
-    url: "https://www.ticketmaster.com/omar-courtz-por-si-manana-no-miami-florida-09-11-2026/event/0D006494AAAD946F?referrer=https%3A%2F%2Fwww.ticketmaster.com%2Fomar-courtz-tickets%2Fartist%2F3026340",
-    labelStatus: "lowtickets"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "SEP 12",
@@ -159,12 +154,104 @@ const tourDates = [
   }
 ];
 
+const tourDatesLATAM = [
+  {
+    date: "OCT 28",
+    city: "C. DE MÉXICO, MÉXICO",
+    venue: "Palacio de los deportes",
+    status: "coming",
+    labelStatus: "newdate"
+  },
+  {
+    date: "OCT 31",
+    city: "GUADALAJARA, MÉXICO",
+    venue: "Arena VFG",
+    status: "coming",
+    labelStatus: "newdate"
+  },
+  {
+    date: "NOV 06",
+    city: "MONTERREY, MÉXICO",
+    venue: "Auditorio Banamex",
+    status: "coming",
+    labelStatus: "newdate"
+  },
+  {
+    date: "NOV 12",
+    city: "BOGOTÁ, COLOMBIA",
+    venue: "Movistar Arena",
+    status: "coming",
+    labelStatus: "newdate"
+  },
+  {
+    date: "NOV 14",
+    city: "SAN SALVADOR, EL SALVADOR",
+    venue: "Complejo Estadio Cuscatlan",
+    status: "coming",
+    labelStatus: "newdate"
+  },
+  {
+    date: "NOV 19",
+    city: "C. DE GUATEMALA, GUATEMALA",
+    venue: "Explanada 5",
+    status: "coming",
+    labelStatus: "newdate"
+  },
+  {
+    date: "NOV 21",
+    city: "SAN JOSÉ, COSTA RICA",
+    venue: "Anfiteatro Imperial",
+    status: "coming",
+    labelStatus: "newdate"
+  },
+  {
+    date: "NOV 26",
+    city: "PANAMA CITY, PANAMA",
+    venue: "Estadio Emilio Royo",
+    status: "coming",
+    labelStatus: "newdate"
+  },
+  {
+    date: "NOV 28",
+    city: "LIMA, PERÚ",
+    venue: "Arena 1",
+    status: "coming",
+    labelStatus: "newdate"
+  },
+  {
+    date: "DEC 03",
+    city: "BUENOS AIRES, ARGENTINA",
+    venue: "Movistar Arena",
+    status: "coming",
+    labelStatus: "newdate"
+  },
+  {
+    date: "DEC 06",
+    city: "SANTIAGO, CHILE",
+    venue: "Movistar Arena",
+    status: "coming",
+    labelStatus: "newdate"
+  },
+  {
+    date: "DEC 12",
+    city: "SANTO DOMINGO, RD",
+    venue: "Festival Presidente",
+    status: "coming",
+    labelStatus: "newdate"
+  }
+];
+
+const tourRegions = {
+  usa: tourDatesUSA,
+  latam: tourDatesLATAM
+};
+
 const labelMap = {
   newvenue: ["NEW", "VENUE"],
   newdate: ["NEW", "DATE"],
   soldout: ["SOLD", "OUT"],
   newtickets: ["NEW", "TICKETS"],
-  lowtickets: ["LOW", "TICKETS"],
+  lowtickets: ["LOW", "TICKETS"]
 };
 
 function createTourLabel(item) {
@@ -223,27 +310,66 @@ function createTourAction(item) {
   `;
 }
 
-function renderTourDates() {
+function renderTourDates(region = "usa") {
   const container = document.getElementById("tourTable");
+
   if (!container) return;
 
-  container.innerHTML = tourDates.map(item => `
-    <div class="tour-row ${item.status === "soldout" ? "is-soldout" : ""}">
-      ${createTourLabel(item)}
+  const selectedDates = tourRegions[region];
 
-      <div class="tour-date">
-        <span>${item.date}</span>
+  container.classList.add("is-changing");
+
+  window.setTimeout(() => {
+    container.innerHTML = selectedDates.map((item) => `
+      <div class="tour-row ${item.status === "soldout" ? "is-soldout" : ""}">
+        ${createTourLabel(item)}
+
+        <div class="tour-date">
+          <span>${item.date}</span>
+        </div>
+
+        <div class="tour-city">${item.city}</div>
+
+        <div class="tour-venue">${item.venue}</div>
+
+        <div class="tour-action">
+          ${createTourAction(item)}
+        </div>
       </div>
+    `).join("");
 
-      <div class="tour-city">${item.city}</div>
-
-      <div class="tour-venue">${item.venue}</div>
-
-      <div class="tour-action">
-        ${createTourAction(item)}
-      </div>
-    </div>
-  `).join("");
+    container.classList.remove("is-changing");
+  }, 140);
 }
 
-renderTourDates();
+function initializeTourTabs() {
+  const tabs = document.querySelectorAll("[data-tour-region]");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const selectedRegion = tab.dataset.tourRegion;
+
+      tabs.forEach((currentTab) => {
+        const isActive = currentTab === tab;
+
+        currentTab.classList.toggle("is-active", isActive);
+        currentTab.setAttribute(
+          "aria-selected",
+          isActive ? "true" : "false"
+        );
+      });
+
+      renderTourDates(selectedRegion);
+    });
+  });
+}
+
+initializeTourTabs();
+
+const activeTab = document.querySelector(
+  ".tour-tab.is-active"
+);
+
+renderTourDates(
+  activeTab?.dataset.tourRegion || "latam"
+);

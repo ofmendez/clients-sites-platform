@@ -218,62 +218,118 @@ body.is-loaded .loader{
   top: 0;
   z-index: 20;
 
-  height: auto;
-  background: #2438d8;
-  overflow: hidden;
+  width: 100%;
 
+  display: flex;
+  flex-direction: column;
+
+  padding-top: var(--hero-padding-top, 50px);
+  padding-bottom: var(--hero-padding-bottom, 34px);
+
+  background-color: #2438d8;
   background-image: url("../assets/bg-desktop-dates.webp");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
 
-  display: flex;
-  flex-direction: column;
-  padding: 50px 0 40px 0;
+  box-shadow: var(--hero-shadow, 0 0 0 rgba(9, 12, 88, 0));
+
+  overflow: hidden;
+
+  will-change:
+    padding-top,
+    padding-bottom,
+    box-shadow;
 }
 
 .tour-hero-art{
   position: relative;
-  width: min(1200px, 92vw);
-  height: 45svh;
-  margin: 0 auto;
+
+  width: var(--hero-art-width, min(1200px, 92vw));
+  height: var(--hero-art-height, 45svh);
+
+  min-height: 190px;
+
+  margin:
+    0 auto
+    var(--hero-art-margin, 22px);
 
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-}
 
-.tour-hero-art__base,
-.tour-hero-art__video{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  overflow: hidden;
+
+  background: transparent;
+
+  will-change:
+    width,
+    height,
+    margin-bottom;
 }
 
 .tour-hero-art__base{
+  position: absolute;
+  inset: 0;
   z-index: 1;
+
   display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  background: transparent;
+}
+
+.tour-hero-art__video-layer{
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  mix-blend-mode: screen;
+  background: transparent;
 }
 
 .tour-hero-art__video{
-  z-index: 2;
-  pointer-events: none;
-  mix-blend-mode: screen;
+  opacity: 1;
   display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  background: transparent;
+  pointer-events: none;
+
+  -webkit-transform: none;
+  transform: none;
 }
 
 @media (max-width: 768px){
   .tour-hero-sticky{
-    padding: 0;
-    background-image: url("../assets/bg-mobile-dates.webp");
+    padding-top: var(--hero-padding-top, 16px);
+    padding-bottom: var(--hero-padding-bottom, 22px);
+
+    background-image:
+      url("../assets/bg-mobile-dates.webp");
   }
 
   .tour-hero-art{
-    width: 80vw;
-    height: 40svh;
+    width: var(--hero-art-width, 86vw);
+    height: var(--hero-art-height, 40svh);
+
+    min-height: 165px;
+
+    margin-bottom:
+      var(--hero-art-margin, 15px);
   }
 }
 
@@ -295,7 +351,7 @@ body.is-loaded .loader{
 .tour-dates-section__inner{
   width: min(1200px, 92vw);
   margin: 0 auto;
-  padding: 40px 0 80px;
+  padding: 34px 0 80px;
 }
 
 
@@ -312,6 +368,94 @@ body.is-loaded .loader{
 .tour-section{
   width: min(1050px, 92vw);
   margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOUR REGION TABS
+========================================================= */
+
+.tour-tabs{
+  position: relative;
+  z-index: 5;
+
+  width: fit-content;
+
+  margin: 0 auto;
+  padding: var(--tabs-padding, 5px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 12px 34px rgba(12, 17, 108, 0.18);
+
+  transform:
+    scale(var(--tabs-scale, 1));
+
+  transform-origin: center center;
+
+  will-change: transform;
+}
+
+.tour-tab{
+  min-width: var(--tab-min-width, 160px);
+  height: var(--tab-height, 48px);
+
+  padding: 0 24px;
+
+  border: 0;
+  border-radius: 999px;
+
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+
+  font-family: var(--bebas);
+  font-size: var(--tab-font-size, 25px);
+  line-height: 1;
+  letter-spacing: 0.5px;
+
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.tour-tab:hover{
+  color: #fff;
+}
+
+.tour-tab.is-active{
+  color: #2430BD;
+  background: #0EF7EF;
+}
+
+.tour-tab:focus-visible{
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+
+
+.tour-table{
+  transition:
+    opacity 140ms ease,
+    transform 140ms ease;
+}
+
+.tour-table.is-changing{
+  opacity: 0;
+  transform: translateY(8px);
 }
 
 .tour-table{
@@ -536,6 +680,27 @@ body.is-loaded .loader{
 }
 
 @media (max-width: 640px){
+
+    .tour-tabs{
+  width: calc(100% - 10vw);
+  margin: 0 auto;
+  padding: var(--tabs-padding, 4px);
+
+  transform:
+    scale(var(--tabs-scale, 1));
+}
+
+.tour-tab{
+  flex: 1;
+
+  min-width: 0;
+  height: var(--tab-height, 11vw);
+
+  padding: 0 2vw;
+
+  font-size: var(--tab-font-size, 5vw);
+}
+
   .tour-dates-section__inner{
     width: 100%;
   }
@@ -552,7 +717,7 @@ body.is-loaded .loader{
   .tour-row{
     grid-template-columns: 7vw 15vw 28vw 24vw;
     column-gap: 3vw;
-    min-height: 42px;
+    min-height: 48px;
     align-items: center;
   }
 
@@ -572,10 +737,17 @@ body.is-loaded .loader{
   }
 
   .tour-date,
-  .tour-city{
-    font-size: 5.5vw;
-    letter-spacing: -0.2px;
-  }
+.tour-city{
+  font-size: 5.5vw;
+  letter-spacing: -0.2px;
+}
+
+.tour-city{
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 0.9;
+  padding: 1vw 0;
+}
 
   .tour-action,
   .tour-btn,
