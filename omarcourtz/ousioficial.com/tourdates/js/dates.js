@@ -191,7 +191,7 @@ const tourDatesLATAM = [
     labelStatus: "newdate"
   },
   {
-    date: "NOV 19",
+    date: "NOV 20",
     city: "C. DE GUATEMALA, GUATEMALA",
     venue: "Explanada 5",
     status: "coming",
