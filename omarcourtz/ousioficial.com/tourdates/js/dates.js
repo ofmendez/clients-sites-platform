@@ -159,56 +159,64 @@ const tourDatesLATAM = [
     date: "OCT 28",
     city: "C. DE MÉXICO, MÉXICO",
     venue: "Palacio de los deportes",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.ticketmaster.com.mx/omar-courtz-ciudad-de-mexico-28-10-2026/event/140064DEC19B99D4?referrer=https%3A%2F%2Fwww.ticketmaster.com.mx%2Fomar-courtz-boletos%2Fartist%2F3026340",
     labelStatus: "newdate"
   },
   {
     date: "OCT 31",
     city: "GUADALAJARA, MÉXICO",
     venue: "Arena VFG",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.ticketmaster.com.mx/omar-courtz-tlajomulco-de-zuniga-31-10-2026/event/3D0064DEC2963798?referrer=https%3A%2F%2Fwww.ticketmaster.com.mx%2Fomar-courtz-boletos%2Fartist%2F3026340",
     labelStatus: "newdate"
   },
   {
     date: "NOV 06",
     city: "MONTERREY, MÉXICO",
     venue: "Auditorio Banamex",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.ticketmaster.com.mx/event/140064DEBF939539",
     labelStatus: "newdate"
   },
   {
     date: "NOV 12",
     city: "BOGOTÁ, COLOMBIA",
     venue: "Movistar Arena",
-    status: "coming",
+    status: "tickets",
+    url: "https://tuboleta.com/es/eventos/omar-courtz-por-si-manana-no-estoy-2026",
     labelStatus: "newdate"
   },
   {
     date: "NOV 14",
     city: "SAN SALVADOR, EL SALVADOR",
     venue: "Complejo Estadio Cuscatlan",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.billetix.co/presales/omarcourtz",
     labelStatus: "newdate"
   },
   {
     date: "NOV 20",
     city: "C. DE GUATEMALA, GUATEMALA",
     venue: "Explanada 5",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.ticketasa.gt/events/omar_courtz",
     labelStatus: "newdate"
   },
   {
     date: "NOV 21",
     city: "SAN JOSÉ, COSTA RICA",
     venue: "Anfiteatro Imperial",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.eticket.cr/eventos.aspx?idartista=1255",
     labelStatus: "newdate"
   },
   {
     date: "NOV 26",
     city: "PANAMA CITY, PANAMA",
     venue: "Estadio Emilio Royo",
-    status: "coming",
+    status: "tickets",
+    url: "https://panatickets.boletosenlinea.events/eventperformances.asp?evt=2700",
     labelStatus: "newdate"
   },
   {
@@ -229,7 +237,8 @@ const tourDatesLATAM = [
     date: "DEC 06",
     city: "SANTIAGO, CHILE",
     venue: "Movistar Arena",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.puntoticket.com/omar-courtz",
     labelStatus: "newdate"
   },
   {
