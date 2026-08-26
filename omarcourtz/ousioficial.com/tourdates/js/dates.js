@@ -237,6 +237,13 @@ const tourDatesLATAM = [
     date: "DEC 06",
     city: "SANTIAGO, CHILE",
     venue: "Movistar Arena",
+    status: "soldout",
+    labelStatus: "soldout"
+  },
+  {
+    date: "DEC 07",
+    city: "SANTIAGO, CHILE",
+    venue: "Movistar Arena",
     status: "tickets",
     url: "https://www.puntoticket.com/omar-courtz",
     labelStatus: "newdate"
