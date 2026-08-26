@@ -159,6 +159,13 @@ const tourDatesLATAM = [
     date: "OCT 28",
     city: "C. DE MÉXICO, MÉXICO",
     venue: "Palacio de los deportes",
+    status: "soldout",
+    labelStatus: "soldout"
+  },
+  {
+    date: "OCT 29",
+    city: "C. DE MÉXICO, MÉXICO",
+    venue: "Palacio de los deportes",
     status: "tickets",
     url: "https://www.ticketmaster.com.mx/omar-courtz-ciudad-de-mexico-28-10-2026/event/140064DEC19B99D4?referrer=https%3A%2F%2Fwww.ticketmaster.com.mx%2Fomar-courtz-boletos%2Fartist%2F3026340",
     labelStatus: "newdate"
@@ -175,17 +182,31 @@ const tourDatesLATAM = [
     date: "NOV 06",
     city: "MONTERREY, MÉXICO",
     venue: "Auditorio Banamex",
+    status: "soldout",
+    labelStatus: "soldout"
+  },
+  {
+    date: "NOV 07",
+    city: "MONTERREY, MÉXICO",
+    venue: "Auditorio Banamex",
     status: "tickets",
     url: "https://www.ticketmaster.com.mx/event/140064DEBF939539",
+    labelStatus: "newdate"
+  },
+  {
+    date: "NOV 12",
+    city: "BOGOTÁ, COLOMBIA",
+    venue: "Movistar Arena",
+    status: "tickets",
+    url: "https://tuboleta.com/es/eventos/omar-courtz-por-si-manana-no-estoy-2026",
     labelStatus: "newdate"
   },
   {
     date: "NOV 13",
     city: "BOGOTÁ, COLOMBIA",
     venue: "Movistar Arena",
-    status: "tickets",
-    url: "https://tuboleta.com/es/eventos/omar-courtz-por-si-manana-no-estoy-2026",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "NOV 14",
