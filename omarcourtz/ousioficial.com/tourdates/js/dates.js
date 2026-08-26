@@ -180,7 +180,7 @@ const tourDatesLATAM = [
     labelStatus: "newdate"
   },
   {
-    date: "NOV 12",
+    date: "NOV 13",
     city: "BOGOTÁ, COLOMBIA",
     venue: "Movistar Arena",
     status: "tickets",
