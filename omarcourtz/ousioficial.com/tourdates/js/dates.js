@@ -244,15 +244,31 @@ const tourDatesLATAM = [
     date: "NOV 28",
     city: "LIMA, PERÚ",
     venue: "Arena 1",
-    status: "coming",
+    status: "tickets",
+    url: "https://www.ticketmaster.pe/event/omar-courtz",
+    labelStatus: "newdate"
+  },
+  {
+    date: "NOV 30",
+    city: "BUENOS AIRES, ARGENTINA",
+    venue: "Movistar Arena",
+    status: "tickets",
+    url: "https://www.movistararena.com.ar/show/949f1877-625b-479f-893a-1ae09da0f00f",
     labelStatus: "newdate"
   },
   {
     date: "DEC 03",
     city: "BUENOS AIRES, ARGENTINA",
     venue: "Movistar Arena",
-    status: "coming",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
+  },
+   {
+    date: "DEC 04",
+    city: "BUENOS AIRES, ARGENTINA",
+    venue: "Movistar Arena",
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "DEC 06",
