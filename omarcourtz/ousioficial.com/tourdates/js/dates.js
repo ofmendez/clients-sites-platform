@@ -244,9 +244,8 @@ const tourDatesLATAM = [
     date: "NOV 28",
     city: "LIMA, PERÚ",
     venue: "Arena 1",
-    status: "tickets",
-    url: "https://www.ticketmaster.pe/event/omar-courtz",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "NOV 30",
