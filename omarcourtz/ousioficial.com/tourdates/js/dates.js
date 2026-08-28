@@ -251,9 +251,8 @@ const tourDatesLATAM = [
     date: "NOV 30",
     city: "BUENOS AIRES, ARGENTINA",
     venue: "Movistar Arena",
-    status: "tickets",
-    url: "https://www.movistararena.com.ar/show/949f1877-625b-479f-893a-1ae09da0f00f",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "DEC 03",
@@ -281,8 +280,8 @@ const tourDatesLATAM = [
     city: "SANTIAGO, CHILE",
     venue: "Movistar Arena",
     status: "tickets",
-    url: "https://www.puntoticket.com/omar-courtz",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "DEC 12",
