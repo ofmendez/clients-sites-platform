@@ -178,9 +178,8 @@ const tourDatesLATAM = [
     date: "NOV 03",
     city: "C. DE MÉXICO, MÉXICO",
     venue: "Palacio de los deportes",
-    status: "tickets",
-    url: "https://www.ticketmaster.com.mx/omar-courtz-ciudad-de-mexico-28-10-2026/event/140064DEC19B99D4?referrer=https%3A%2F%2Fwww.ticketmaster.com.mx%2Fomar-courtz-boletos%2Fartist%2F3026340",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "NOV 06",
@@ -215,9 +214,8 @@ const tourDatesLATAM = [
     date: "NOV 14",
     city: "SAN SALVADOR, EL SALVADOR",
     venue: "Complejo Estadio Cuscatlan",
-    status: "tickets",
-    url: "https://www.billetix.co/presales/omarcourtz",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "NOV 20",
