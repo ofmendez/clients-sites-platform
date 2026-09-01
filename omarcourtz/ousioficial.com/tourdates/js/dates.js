@@ -24,9 +24,8 @@ const tourDatesUSA = [
     date: "AUG 27",
     city: "HOUSTON, TX",
     venue: "Toyota Center",
-    status: "tickets",
-    url: "https://www.toyotacenter.com/events/detail/omar-courtz",
-    labelStatus: "newvenue"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "AUG 28",
@@ -39,9 +38,8 @@ const tourDatesUSA = [
     date: "AUG 30",
     city: "ATLANTA, GA",
     venue: "Gas South Arena",
-    status: "tickets",
-    url: "https://www.ticketmaster.com/event/0E006479E4D7F324",
-    labelStatus: "newtickets"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "SEP 02",
