@@ -43,7 +43,7 @@ const tourDatesUSA = [
   },
   {
     date: "SEP 02",
-    city: "WASHINGTON, DC",
+    city: "BALTIMORE, MD",
     venue: "CFG Arena",
     status: "tickets",
     url: "https://www.ticketmaster.com/event/150064A2C0D8A6B7",
