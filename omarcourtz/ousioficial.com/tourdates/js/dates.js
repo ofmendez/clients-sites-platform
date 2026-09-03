@@ -103,8 +103,9 @@ const tourDatesUSA = [
     date: "SEP 17",
     city: "READING, PA",
     venue: "Santander Arena",
-    status: "soldout",
-    labelStatus: "soldout"
+    status: "tickets",
+    url: "https://www.ticketmaster.com/omar-courtz-por-si-manana-no-reading-pennsylvania-09-10-2026/event/02006471D307D86F",
+    labelStatus: "newtickets"
   },
   {
     date: "SEP 19",
