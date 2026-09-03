@@ -45,14 +45,6 @@ const tourDatesUSA = [
     date: "SEP 02",
     city: "BALTIMORE, MD",
     venue: "CFG Arena",
-    status: "tickets",
-    url: "https://www.ticketmaster.com/event/150064A2C0D8A6B7",
-    labelStatus: "newvenue"
-  },
-  {
-    date: "SEP 03",
-    city: "BOSTON, MA",
-    venue: "MGM Music Hall @ Fenway",
     status: "soldout",
     labelStatus: "soldout"
   },
@@ -79,13 +71,6 @@ const tourDatesUSA = [
     labelStatus: "soldout"
   },
   {
-    date: "SEP 10",
-    city: "READING, PA",
-    venue: "Santander Arena",
-    status: "soldout",
-    labelStatus: "soldout"
-  },
-  {
     date: "SEP 11",
     city: "MIAMI, FL",
     venue: "Kaseya Center",
@@ -103,6 +88,21 @@ const tourDatesUSA = [
     date: "SEP 13",
     city: "ORLANDO, FL",
     venue: "Kia Center",
+    status: "soldout",
+    labelStatus: "soldout"
+  },
+  {
+    date: "SEP 16",
+    city: "BOSTON, MA",
+    venue: "Agganis Arena",
+    status: "tickets",
+    url: "https://www.ticketmaster.com/event/01006522B015E493",
+    labelStatus: "newvenue"
+  },
+  {
+    date: "SEP 17",
+    city: "READING, PA",
+    venue: "Santander Arena",
     status: "soldout",
     labelStatus: "soldout"
   },
