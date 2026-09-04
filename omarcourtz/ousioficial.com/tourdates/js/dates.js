@@ -294,10 +294,93 @@ const tourDatesLATAM = [
   }
 ];
 
+/* =========================================================
+   OUSI PASS
+   Usa exactamente las mismas fechas de USA
+========================================================= */
+
+const tourDatesOUSIPASS = [
+  {
+    date: "SEP 05",
+    city: "CHICAGO, IL",
+    venue: "United Center",
+    status: "tickets",
+    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-kch3jx",
+    labelStatus: "newtickets"
+  },
+  {
+    date: "SEP 08",
+    city: "BROOKLYN, NY",
+    venue: "Barclays Center",
+    status: "tickets",
+    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-t95ppm",
+    labelStatus: "newtickets"
+  },
+  {
+    date: "SEP 09",
+    city: "BROOKLYN, NY",
+    venue: "Barclays Center",
+    status: "tickets",
+    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-cxrpln",
+    labelStatus: "newtickets"
+  },
+  {
+    date: "SEP 11",
+    city: "MIAMI, FL",
+    venue: "Kaseya Center",
+    status: "tickets",
+    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-7e78mv",
+    labelStatus: "newtickets"
+  },
+  {
+    date: "SEP 12",
+    city: "MIAMI, FL",
+    venue: "Kaseya Center",
+    status: "tickets",
+    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-hdyhoz",
+    labelStatus: "newtickets"
+  },
+  {
+    date: "SEP 13",
+    city: "ORLANDO, FL",
+    venue: "Kia Center",
+    status: "tickets",
+    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-2xe4z8",
+    labelStatus: "newtickets"
+  },
+  {
+    date: "SEP 16",
+    city: "BOSTON, MA",
+    venue: "Agganis Arena",
+    status: "tickets",
+    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-hvyvlm",
+    labelStatus: "newtickets"
+  },
+  {
+    date: "SEP 17",
+    city: "READING, PA",
+    venue: "Santander Arena",
+    status: "tickets",
+    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-m1x81t",
+    labelStatus: "newtickets"
+  },
+  {
+    date: "SEP 19",
+    city: "ORLANDO, FL",
+    venue: "Kia Center",
+    status: "tickets",
+    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-3xmr8f",
+    labelStatus: "newtickets"
+  }
+];
+
+
 const tourRegions = {
   usa: tourDatesUSA,
-  latam: tourDatesLATAM
+  latam: tourDatesLATAM,
+  ousipass: tourDatesOUSIPASS
 };
+
 
 const labelMap = {
   newvenue: ["NEW", "VENUE"],
@@ -306,6 +389,7 @@ const labelMap = {
   newtickets: ["NEW", "TICKETS"],
   lowtickets: ["LOW", "TICKETS"]
 };
+
 
 function createTourLabel(item) {
   if (!item.labelStatus || !labelMap[item.labelStatus]) {
@@ -322,9 +406,18 @@ function createTourLabel(item) {
   `;
 }
 
-function createTourAction(item) {
+
+function createTourAction(item, region) {
+
   if (["tickets", "presale"].includes(item.status) && item.url) {
-    const buttonText = item.status === "presale" ? "PRE-SALE" : "TICKETS";
+
+    const buttonText =
+      item.status === "presale"
+        ? "PRE-SALE"
+        : region === "ousipass"
+          ? "OUSI PASS"
+          : "TICKETS";
+
     const ariaText =
       item.status === "presale"
         ? `Preventa para ${item.city}`
@@ -339,6 +432,7 @@ function createTourAction(item) {
         aria-label="${ariaText}"
       >
         <span>${buttonText}</span>
+
         <img
           class="tour-btn__arrow"
           src="assets/arrow-right.svg"
@@ -348,6 +442,7 @@ function createTourAction(item) {
     `;
   }
 
+
   if (item.status === "soldout") {
     return `
       <span class="tour-status tour-status--soldout">
@@ -356,6 +451,7 @@ function createTourAction(item) {
     `;
   }
 
+
   return `
     <span class="tour-status tour-status--coming">
       COMING SOON
@@ -363,7 +459,9 @@ function createTourAction(item) {
   `;
 }
 
+
 function renderTourDates(region = "usa") {
+
   const container = document.getElementById("tourTable");
 
   if (!container) return;
@@ -372,56 +470,87 @@ function renderTourDates(region = "usa") {
 
   container.classList.add("is-changing");
 
+
   window.setTimeout(() => {
+
     container.innerHTML = selectedDates.map((item) => `
+
       <div class="tour-row ${item.status === "soldout" ? "is-soldout" : ""}">
+
         ${createTourLabel(item)}
 
         <div class="tour-date">
           <span>${item.date}</span>
         </div>
 
-        <div class="tour-city">${item.city}</div>
+        <div class="tour-city">
+          ${item.city}
+        </div>
 
-        <div class="tour-venue">${item.venue}</div>
+        <div class="tour-venue">
+          ${item.venue}
+        </div>
 
         <div class="tour-action">
-          ${createTourAction(item)}
+          ${createTourAction(item, region)}
         </div>
+
       </div>
+
     `).join("");
 
+
     container.classList.remove("is-changing");
+
   }, 140);
 }
 
+
 function initializeTourTabs() {
+
   const tabs = document.querySelectorAll("[data-tour-region]");
 
+
   tabs.forEach((tab) => {
+
     tab.addEventListener("click", () => {
+
       const selectedRegion = tab.dataset.tourRegion;
 
+
       tabs.forEach((currentTab) => {
+
         const isActive = currentTab === tab;
 
-        currentTab.classList.toggle("is-active", isActive);
+        currentTab.classList.toggle(
+          "is-active",
+          isActive
+        );
+
         currentTab.setAttribute(
           "aria-selected",
           isActive ? "true" : "false"
         );
+
       });
 
+
       renderTourDates(selectedRegion);
+
     });
+
   });
+
 }
 
+
 initializeTourTabs();
+
 
 const activeTab = document.querySelector(
   ".tour-tab.is-active"
 );
+
 
 renderTourDates(
   activeTab?.dataset.tourRegion || "latam"
