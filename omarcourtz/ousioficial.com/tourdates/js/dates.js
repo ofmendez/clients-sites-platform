@@ -52,9 +52,8 @@ const tourDatesUSA = [
     date: "SEP 05",
     city: "CHICAGO, IL",
     venue: "United Center",
-    status: "tickets",
-    url: "https://www.ticketmaster.com/event/0400649EDE1DE3C2",
-    labelStatus: "newvenue"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "SEP 08",
@@ -304,9 +303,8 @@ const tourDatesOUSIPASS = [
     date: "SEP 05",
     city: "CHICAGO, IL",
     venue: "United Center",
-    status: "tickets",
-    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-kch3jx",
-    labelStatus: "newtickets"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "SEP 08",
