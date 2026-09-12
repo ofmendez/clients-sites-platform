@@ -318,8 +318,8 @@ const tourDatesOUSIPASS = [
     city: "BROOKLYN, NY",
     venue: "Barclays Center",
     status: "tickets",
-    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-cxrpln",
-    labelStatus: "newtickets"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "SEP 11",
