@@ -317,7 +317,6 @@ const tourDatesOUSIPASS = [
     date: "SEP 09",
     city: "BROOKLYN, NY",
     venue: "Barclays Center",
-    status: "tickets",
     status: "soldout",
     labelStatus: "soldout"
   },
@@ -325,25 +324,22 @@ const tourDatesOUSIPASS = [
     date: "SEP 11",
     city: "MIAMI, FL",
     venue: "Kaseya Center",
-    status: "tickets",
-    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-7e78mv",
-    labelStatus: "newtickets"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "SEP 12",
     city: "MIAMI, FL",
     venue: "Kaseya Center",
-    status: "tickets",
-    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-hdyhoz",
-    labelStatus: "newtickets"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "SEP 13",
     city: "ORLANDO, FL",
     venue: "Kia Center",
-    status: "tickets",
-    url: "https://vip.porsimanananoestoy.com/event/omar-courtz-por-si-manana-no-estoy-2xe4z8",
-    labelStatus: "newtickets"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "SEP 16",
