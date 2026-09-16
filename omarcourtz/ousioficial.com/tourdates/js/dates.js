@@ -256,6 +256,13 @@ const tourDatesLATAM = [
     labelStatus: "soldout"
   },
   {
+    date: "DEC 02",
+    city: "BUENOS AIRES, ARGENTINA",
+    venue: "Movistar Arena",
+    status: "soldout",
+    labelStatus: "soldout"
+  },
+  {
     date: "DEC 03",
     city: "BUENOS AIRES, ARGENTINA",
     venue: "Movistar Arena",
