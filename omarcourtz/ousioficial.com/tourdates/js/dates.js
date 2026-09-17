@@ -94,9 +94,8 @@ const tourDatesUSA = [
     date: "SEP 16",
     city: "BOSTON, MA",
     venue: "Agganis Arena",
-    status: "tickets",
-    url: "https://www.ticketmaster.com/event/01006522B015E493",
-    labelStatus: "newvenue"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "SEP 17",
@@ -146,9 +145,8 @@ const tourDatesUSA = [
     date: "OCT 01",
     city: "SAN JUAN, PR",
     venue: "Coliseo de Puerto Rico",
-    status: "tickets",
-    url: "https://choli.ticketera.com/event/omar-courtz-por-si-manana-no-estoy-9d33cx?_gl=1*tbfb62*_gcl_au*MTAxODM0Njg2Mi4xNzg0MjIzOTgz",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   }
 ];
 
