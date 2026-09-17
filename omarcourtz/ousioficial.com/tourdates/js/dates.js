@@ -147,6 +147,13 @@ const tourDatesUSA = [
     venue: "Coliseo de Puerto Rico",
     status: "soldout",
     labelStatus: "soldout"
+  },
+  {
+    date: "OCT 02",
+    city: "SAN JUAN, PR",
+    venue: "Coliseo de Puerto Rico",
+    status: "coming",
+    labelStatus: "newdate"
   }
 ];
 
