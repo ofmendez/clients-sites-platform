@@ -293,7 +293,8 @@ const tourDatesLATAM = [
     date: "DEC 12",
     city: "SANTO DOMINGO, RD",
     venue: "Festival Presidente",
-    status: "coming",
+    status: "tickets",
+    url: "https://festivalpresidente.tuboleta.com.do/eventperformances.asp?evt=952",
     labelStatus: "newdate"
   }
 ];
