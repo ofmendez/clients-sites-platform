@@ -153,6 +153,13 @@ const tourDatesUSA = [
     status: "tickets",
     url: "https://www.ticketera.com/events/detail/omar-courtz-por-si-manana-no-estoy#",
     labelStatus: "newdate"
+  },
+  {
+    date: "OCT 03",
+    city: "SAN JUAN, PR",
+    venue: "Coliseo de Puerto Rico",
+    status: "comingSoon",
+    labelStatus: "newdate"
   }
 ];
 
