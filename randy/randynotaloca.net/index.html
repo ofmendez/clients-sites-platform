@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cutive&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=1.0.1">
 
   <!-- Datos estructurados para buscadores -->
   <script type="application/ld+json">
@@ -104,7 +104,7 @@
   <img class="petal" src="assets/petalo-1.webp" style="--x: 32%; --y: 29%; --size: 61px" data-fall="0.10" data-drift="0.028" data-turn="-11" data-flip="-1" alt="">
   <img class="petal" src="assets/petalo-3.webp" style="--x: 66%; --y: 38%; --size: 104px" data-fall="0.13" data-drift="-0.019" data-turn="8" data-flip="1" alt="">
   <img class="petal" src="assets/petalo-2.webp" style="--x: 14%; --y: 49%; --size: 54px" data-fall="0.17" data-drift="0.023" data-turn="12" data-flip="-1" alt="">
-  <img class="petal" src="assets/petalo-4.webp" style="--x: 49%; --y: 61%; --size: 72px" data-fall="0.11" data-drift="-0.027" data-turn="-8" data-flip="1" alt="">
+  <img class="petal" src="assets/petalo-4.webp" style="--x: 49%; --y: 67%; --size: 72px" data-fall="0.11" data-drift="-0.027" data-turn="-8" data-flip="1" alt="">
   <img class="petal" src="assets/petalo-1.webp" style="--x: 85%; --y: 75%; --size: 60px" data-fall="0.14" data-drift="0.016" data-turn="10" data-flip="-1" alt="">
   <img class="petal" src="assets/petalo-3.webp" style="--x: 37%; --y: 88%; --size: 98px" data-fall="0.09" data-drift="-0.021" data-turn="-6" data-flip="-1" alt="">
 </div>
@@ -115,7 +115,7 @@
   <img class="petal" src="assets/petalo-2.webp" style="--x: 88%; --y: 30.5%; --size: 62px" data-fall="0.25" data-drift="0.02" data-turn="-14" data-flip="-1" alt="">
   <img class="petal" src="assets/petalo-4.webp" style="--x: 18%; --y: 34%; --size: 84px" data-fall="0.17" data-drift="-0.04" data-turn="9" data-flip="1" alt="">
   <img class="petal petal--near" src="assets/petalo-3.webp" style="--x: 83%; --y: 44%; --size: 180px" data-fall="0.09" data-drift="0.045" data-turn="6" data-flip="1" alt="">
-  <img class="petal" src="assets/petalo-1.webp" style="--x: 9%; --y: 57%; --size: 68px" data-fall="0.23" data-drift="0.025" data-turn="-12" data-flip="-1" alt="">
+  <img class="petal" src="assets/petalo-1.webp" style="--x: 3%; --y: 57%; --size: 68px" data-fall="0.23" data-drift="0.025" data-turn="-12" data-flip="-1" alt="">
   <img class="petal" src="assets/petalo-4.webp" style="--x: 75%; --y: 69%; --size: 72px" data-fall="0.14" data-drift="-0.03" data-turn="13" data-flip="-1" alt="">
   <img class="petal" src="assets/petalo-2.webp" style="--x: 4%; --y: 83%; --size: 55px" data-fall="0.21" data-drift="0.035" data-turn="-8" data-flip="1" alt="">
   <img class="petal petal--near" src="assets/petalo-3.webp" style="--x: 91%; --y: 91%; --size: 155px" data-fall="0.08" data-drift="-0.025" data-turn="5" data-flip="-1" alt="">
@@ -143,12 +143,14 @@
 
         <div class="hero__listen">
          <div class="listen-button">
-  <span>Haz Pre-Save</span>
+  <span>Escucha ahora</span>
 </div>
           <nav class="platforms" id="plataformas" aria-label="Escuchar en plataformas">
             <a href="https://music.apple.com/us/album/romances-de-una-nota-iii/6814980213?ls=1&app=itunes" target="_blank" rel="noopener noreferrer" aria-label="Apple Music"><img src="assets/apple-music.svg" alt="" width="28" height="28"></a>
             <a href="https://open.spotify.com/prerelease/6tpoypSta6eMThHNz86DJH?si=j-vXkQnxRPWvN6Bx8h79wg&utm_source=copy-link" target="_blank" rel="noopener noreferrer" aria-label="Spotify"><img src="assets/spotify.svg" alt="" width="28" height="28"></a>
             <a href="https://www.amazon.com/gp/product/B0HKQBVHCW" target="_blank" rel="noopener noreferrer" aria-label="Amazon Music"><img src="assets/amazon-music.svg" alt="" width="28" height="28"></a>
+            <a href="https://youtube.com/playlist?list=PLK7gUnMgEqOo&si=RLC56Sn7YnK__KyB" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><img src="assets/youtube.svg" alt="" width="28" height="28"></a>
+            <a href="https://link.deezer.com/s/34yDAeTKdnGWiEH0dcubj" target="_blank" rel="noopener noreferrer" aria-label="Deezer"><img src="assets/deezer.svg" alt="" width="28" height="28"></a>
           </nav>
         </div>
       </div>
@@ -157,6 +159,59 @@
         <img src="assets/mountain.webp" class="mountain-image" alt="" loading="eager">
       </picture>
     </section>
+
+    <section class="songs" id="canciones" aria-labelledby="songs-title">
+      <div class="songs__heading">
+        <span></span><h2 id="songs-title">Canciones</h2><span></span>
+      </div>
+
+      <div class="songs-slider" aria-roledescription="carrusel">
+        
+        <div class="songs-viewport">
+          <div class="songs-track"></div>
+        </div>
+       
+      </div>
+      <div class="songs-navigation">
+
+  <button
+    class="songs-nav-arrow songs-nav-arrow--prev"
+    type="button"
+    aria-label="Canción anterior"
+  >
+    ‹
+  </button>
+
+  <div
+    class="songs-pagination"
+    aria-label="Seleccionar canción"
+  ></div>
+
+  <div
+    class="songs-counter"
+    aria-live="polite"
+  >
+    <span>01</span> / 18
+  </div>
+
+  <button
+    class="songs-nav-arrow songs-nav-arrow--next"
+    type="button"
+    aria-label="Siguiente canción"
+  >
+    ›
+  </button>
+
+</div>
+    </section>
+
+    <div class="video-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Reproductor de video">
+      <button class="video-modal__close" type="button" aria-label="Cerrar video">×</button>
+      <div class="video-modal__frame">
+        <iframe title="Video oficial" src="" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        <div class="video-modal__empty">Agrega el YouTube ID de esta canción en el array <strong>songsData</strong>.</div>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer" aria-label="Pie de página">
@@ -195,67 +250,8 @@
       </div>
     </div>
   </footer>
-<script>
-  const petals = [...document.querySelectorAll(".petal")];
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  const states = petals.map((petal, index) => ({
-    element: petal,
-    fall: Number(petal.dataset.fall),
-    drift: Number(petal.dataset.drift),
-    turn: Number(petal.dataset.turn),
-    flip: Number(petal.dataset.flip || 1),
-    ease: 0.045 + index * 0.012,
-    currentX: 0,
-    currentY: 0,
-    currentRotation: 0
-  }));
 
-  let targetScroll = window.scrollY;
-  let frame = null;
-
-  function animatePetals() {
-    let moving = false;
-
-    for (const petal of states) {
-      const targetY = Math.min(targetScroll * petal.fall, 130);
-      const targetX = Math.max(-45, Math.min(targetScroll * petal.drift, 45));
-      const targetRotation = Math.min(targetScroll / 900, 1) * petal.turn;
-
-      petal.currentY += (targetY - petal.currentY) * petal.ease;
-      petal.currentX += (targetX - petal.currentX) * petal.ease;
-      petal.currentRotation +=
-        (targetRotation - petal.currentRotation) * petal.ease;
-
-      petal.element.style.transform = `
-        translate3d(${petal.currentX}px, ${petal.currentY}px, 0)
-        rotate(${petal.currentRotation}deg)
-        scaleX(${petal.flip})
-      `;
-
-      if (
-        Math.abs(targetY - petal.currentY) > 0.1 ||
-        Math.abs(targetX - petal.currentX) > 0.1 ||
-        Math.abs(targetRotation - petal.currentRotation) > 0.1
-      ) {
-        moving = true;
-      }
-    }
-
-    frame = moving ? requestAnimationFrame(animatePetals) : null;
-  }
-
-  function updatePetals() {
-    if (reduceMotion.matches) return;
-    targetScroll = window.scrollY || window.pageYOffset || 0;
-    if (frame === null) frame = requestAnimationFrame(animatePetals);
-  }
-
-  // Safari puede diferir la notificación de scroll durante el gesto táctil.
-  window.addEventListener("scroll", updatePetals, { passive: true });
-  window.addEventListener("touchmove", updatePetals, { passive: true });
-  window.addEventListener("pageshow", updatePetals);
-  reduceMotion.addEventListener("change", updatePetals);
-</script>
+  <script src="script.js?v=1.0.1"></script>
 </body>
 </html>
