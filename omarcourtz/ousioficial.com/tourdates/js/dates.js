@@ -150,17 +150,15 @@ const tourDatesUSA = [
     date: "OCT 02",
     city: "SAN JUAN, PR",
     venue: "Coliseo de Puerto Rico",
-    status: "tickets",
-    url: "https://www.ticketera.com/events/detail/omar-courtz-por-si-manana-no-estoy#",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "OCT 03",
     city: "SAN JUAN, PR",
     venue: "Coliseo de Puerto Rico",
-    status: "tickets",
-    url: "https://www.ticketera.com/events/detail/omar-courtz-por-si-manana-no-estoy#tickets",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   }
 ];
 
@@ -211,9 +209,8 @@ const tourDatesLATAM = [
     date: "NOV 12",
     city: "BOGOTÁ, COLOMBIA",
     venue: "Movistar Arena",
-    status: "tickets",
-    url: "https://tuboleta.com/es/eventos/omar-courtz-por-si-manana-no-estoy-2026",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "NOV 13",
