@@ -301,6 +301,14 @@ const tourDatesLATAM = [
     labelStatus: "soldout"
   },
   {
+    date: "DEC 08",
+    city: "SANTIAGO, CHILE",
+    venue: "Vibra Fest, Hipódromo Chile",
+    status: "tickets",
+    url: "https://vibrafest.cl/",
+    labelStatus: "newdate"
+  },
+  {
     date: "DEC 12",
     city: "SANTO DOMINGO, RD",
     venue: "Festival Presidente",
