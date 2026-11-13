@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#120c28">
+    <meta name="description"
+        content="Política de privacidad y tratamiento de datos personales de OD Entertainment Inc.">
+    <title>Política de Privacidad | OD Entertainment</title>
+    <style>
+        :root {
+            --bg: #120c28;
+            --white: #fff;
+            --muted: rgba(255, 255, 255, .66);
+            --soft: rgba(255, 255, 255, .43);
+            --line: rgba(255, 255, 255, .13)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 35px
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--muted);
+            font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.8
+        }
+
+        a {
+            color: #fff;
+            text-decoration-color: rgba(255, 255, 255, .4);
+            text-underline-offset: 4px
+        }
+
+        a:hover {
+            text-decoration-color: #fff
+        }
+
+        .wrap {
+            max-width: 1240px;
+            margin: auto;
+            padding: 0 48px
+        }
+
+        .topbar {
+            padding: 36px 0;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .brand {
+            color: #fff;
+            font-weight: 750;
+            font-size: 15px;
+            letter-spacing: .15em;
+            text-decoration: none
+        }
+
+        .hero {
+            padding: 110px 0 90px;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .eyebrow,
+        .section-number,
+        .meta {
+            font-size: 11px;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--soft);
+            font-weight: 650
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: clamp(52px, 8vw, 112px);
+            letter-spacing: -.075em;
+            line-height: 1.03;
+            margin: 23px 0 30px;
+            font-weight: 600;
+            max-width: 900px
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 640px;
+            margin: 0
+        }
+
+        .hero .meta {
+            margin-top: 38px
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 245px minmax(0, 1fr);
+            gap: 95px;
+            padding-top: 72px;
+            padding-bottom: 120px
+        }
+
+        .sidebar {
+            align-self: start;
+            position: sticky;
+            top: 30px
+        }
+
+        .sidebar-label {
+            display: block;
+            margin-bottom: 24px;
+            color: var(--soft);
+            font-size: 11px;
+            letter-spacing: .18em;
+            text-transform: uppercase
+        }
+
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            gap: 16px
+        }
+
+        .sidebar a {
+            color: var(--soft);
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 1.5;
+            display: flex;
+            gap: 14px;
+            transition: color .2s
+        }
+
+        .sidebar a span {
+            font-size: 10px;
+            opacity: .65
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            color: #fff
+        }
+
+        .policy-section {
+            padding: 0 0 62px;
+            margin-bottom: 62px;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .section-heading {
+            margin-bottom: 26px
+        }
+
+        .section-number {
+            display: block;
+            margin-bottom: 12px
+        }
+
+        .policy-section h2 {
+            font-size: clamp(25px, 3vw, 38px);
+            line-height: 1.22;
+            letter-spacing: -.045em;
+            font-weight: 550;
+            color: #fff;
+            margin: 0
+        }
+
+        .section-content {
+            font-size: 14px;
+            line-height: 1.95
+        }
+
+        .section-content p {
+            margin: 0 0 20px
+        }
+
+        .section-content h3 {
+            font-size: 14px;
+            color: #fff;
+            font-weight: 600;
+            margin: 30px 0 10px
+        }
+
+        .section-content ul {
+            padding-left: 20px;
+            margin: 12px 0 24px
+        }
+
+        .section-content li {
+            padding-left: 6px;
+            margin-bottom: 8px
+        }
+
+        .section-content li::marker {
+            color: rgba(255, 255, 255, .38)
+        }
+
+        blockquote {
+            border-left: 2px solid rgba(255, 255, 255, .55);
+            margin: 20px 0 28px;
+            padding: 12px 0 12px 22px;
+            color: rgba(255, 255, 255, .85);
+            background: rgba(255, 255, 255, .025)
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            margin: 24px 0 30px
+        }
+
+        table {
+            width: 100%;
+            min-width: 650px;
+            border-collapse: collapse;
+            font-size: 12px;
+            line-height: 1.65
+        }
+
+        th {
+            text-align: left;
+            color: #fff;
+            font-weight: 600
+        }
+
+        td,
+        th {
+            padding: 15px 14px;
+            border-bottom: 1px solid var(--line);
+            vertical-align: top
+        }
+
+        td:first-child {
+            color: #fff;
+            font-weight: 550
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 32px 0 44px;
+            font-size: 12px;
+            color: var(--soft)
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap
+        }
+
+        .backtop {
+            color: #fff;
+            text-decoration: none
+        }
+
+        @media(max-width:900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                gap: 45px
+            }
+
+            .sidebar {
+                position: static;
+                border-bottom: 1px solid var(--line);
+                padding-bottom: 36px
+            }
+
+            .sidebar nav {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 14px 24px
+            }
+
+            .hero {
+                padding: 80px 0 65px
+            }
+        }
+
+        @media(max-width:600px) {
+            .wrap {
+                padding: 0 24px
+            }
+
+            .topbar {
+                padding: 25px 0
+            }
+
+            .hero {
+                padding: 70px 0 55px
+            }
+
+            .hero h1 {
+                font-size: clamp(48px, 12vw, 70px)
+            }
+
+            .hero p {
+                font-size: 15px
+            }
+
+            .layout {
+                padding-top: 44px;
+                padding-bottom: 45px
+            }
+
+            .sidebar nav {
+                grid-template-columns: 1fr
+            }
+
+            .policy-section {
+                padding-bottom: 42px;
+                margin-bottom: 42px
+            }
+
+            .section-content {
+                font-size: 13px
+            }
+
+            blockquote {
+                padding-left: 15px;
+                overflow-wrap: anywhere
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="wrap"><a class="brand" href="#inicio">OD ENTERTAINMENT</a></div>
+    </header>
+    <main id="inicio">
+        <div class="wrap">
+            <div class="hero"><span class="eyebrow">Legal / Privacidad</span>
+                <h1>Política de<br>Privacidad.</h1>
+                <p>Conoce cómo recopilamos, utilizamos y protegemos tu información personal.</p>
+                <div class="meta">Última actualización · 13 de noviembre de 2026</div>
+            </div>
+            <div class="layout">
+                <aside class="sidebar"><span class="sidebar-label">Contenido / 09 secciones</span>
+                    <nav aria-label="Índice de la política"><a href="#seccion-1"><span>01</span>Quiénes somos</a><a
+                            href="#seccion-2"><span>02</span>Información que recopilamos</a><a
+                            href="#seccion-3"><span>03</span>Cómo usamos su información</a><a
+                            href="#seccion-4"><span>04</span>Su consentimiento para correos, mensajes de texto y
+                            llamadas</a><a href="#seccion-5"><span>05</span>Con quién compartimos su información</a><a
+                            href="#seccion-6"><span>06</span>Retención, seguridad y menores de edad</a><a
+                            href="#seccion-7"><span>07</span>Sus derechos</a><a href="#seccion-8"><span>08</span>Fans en
+                            Latinoamérica</a><a href="#seccion-9"><span>09</span>Contacto y cambios a esta política</a>
+                    </nav>
+                </aside>
+                <article aria-label="Política de privacidad">
+                    <section class="policy-section" id="seccion-1">
+                        <div class="section-heading"><span class="section-number">01 / 09</span>
+                            <h2>Quiénes somos</h2>
+                        </div>
+                        <div class="section-content">
+                            <p>OD Entertainment Inc. (&quot;OD Entertainment&quot;, &quot;nosotros&quot;) es la compañía
+                                de manejo y producción responsable de la información que usted nos entrega a través del
+                                formulario de registro de fans en nuestros conciertos y eventos, incluidos los de Omar
+                                Courtz en Puerto Rico, Estados Unidos y Latinoamérica. Esta política explica qué datos
+                                recopilamos, para qué los usamos, con quién los compartimos y cómo puede ejercer control
+                                sobre ellos.</p>
+                            <p>Al completar y enviar el formulario, usted acepta las prácticas descritas aquí.</p>
+                            <p>Responsable de los datos: OD Entertainment Inc., Puerto Rico. Contacto de privacidad: <a
+                                    href="mailto:info@odentertainmentinc.com">info@odentertainmentinc.com</a>.</p>
+                        </div>
+                    </section>
+                    <section class="policy-section" id="seccion-2">
+                        <div class="section-heading"><span class="section-number">02 / 09</span>
+                            <h2>Información que recopilamos</h2>
+                        </div>
+                        <div class="section-content">
+                            <h3>A través del formulario recopilamos únicamente los datos que usted nos da
+                                voluntariamente:</h3>
+                            <ul>
+                                <li>Nombre y apellido</li>
+                                <li>Ciudad de residencia</li>
+                                <li>Correo electrónico</li>
+                                <li>Número de teléfono</li>
+                            </ul>
+                            <p>También registramos el evento, la fecha y el lugar donde se completó el formulario, y la
+                                fecha y hora en que usted dio su consentimiento. Si el formulario es digital (por
+                                ejemplo, mediante código QR), el proveedor de la plataforma puede registrar datos
+                                técnicos básicos como dirección IP y tipo de dispositivo.</p>
+                            <p>No solicitamos números de seguro social, información de pago ni otros datos sensibles a
+                                través de este formulario.</p>
+                        </div>
+                    </section>
+                    <section class="policy-section" id="seccion-3">
+                        <div class="section-heading"><span class="section-number">03 / 09</span>
+                            <h2>Cómo usamos su información</h2>
+                        </div>
+                        <div class="section-content">
+                            <p>Usamos sus datos para enviarle comunicaciones promocionales y de mercadeo sobre Omar
+                                Courtz y otros artistas manejados o producidos por OD Entertainment. Esto incluye:</p>
+                            <ul>
+                                <li>Anuncios de conciertos, giras, fechas nuevas y preventas</li>
+                                <li>Lanzamientos de música, videos y contenido exclusivo</li>
+                                <li>Mercancía oficial, ofertas y promociones</li>
+                                <li>Concursos, sorteos y experiencias para fans</li>
+                                <li>Encuestas para conocer mejor a nuestra audiencia</li>
+                            </ul>
+                            <p>También podemos usar su ciudad y el evento donde se registró para enviarle información
+                                relevante a su zona, y para crear audiencias en plataformas publicitarias como Meta
+                                (Facebook e Instagram), Google y TikTok, de modo que vea anuncios de nuestros artistas.
+                                Estas plataformas reciben los datos en formato cifrado (hash) y no pueden usarlos para
+                                fines propios distintos a ese servicio.</p>
+                            <p>No vendemos su información personal a terceros a cambio de dinero.</p>
+                        </div>
+                    </section>
+                    <section class="policy-section" id="seccion-4">
+                        <div class="section-heading"><span class="section-number">04 / 09</span>
+                            <h2>Su consentimiento para correos, mensajes de texto y llamadas</h2>
+                        </div>
+                        <div class="section-content">
+                            <p>Solo le enviaremos comunicaciones de mercadeo si usted lo autoriza marcando la casilla
+                                correspondiente en el formulario. La casilla no viene marcada por defecto y dar su
+                                consentimiento no es condición para comprar boletos, mercancía ni para entrar al evento.
+                            </p>
+                            <h3>Texto de consentimiento que aparece en el formulario:</h3>
+                            <blockquote>Al marcar esta casilla, autorizo a OD Entertainment Inc. a enviarme correos
+                                electrónicos, mensajes de texto (SMS/MMS) y llamadas promocionales, incluidos mensajes
+                                enviados mediante sistemas automatizados, sobre Omar Courtz y otros artistas de OD
+                                Entertainment al número y correo que proveo. Mi consentimiento no es condición de
+                                compra. La frecuencia de mensajes varía. Pueden aplicar tarifas de mensajes y datos.
+                                Responda STOP para cancelar o HELP para ayuda. Autorizo que mis datos se almacenen y
+                                traten en Puerto Rico y Estados Unidos. He leído y acepto la Política de Privacidad.
+                            </blockquote>
+                            <h3>Qué significa marcar la casilla:</h3>
+                            <ul>
+                                <li>Marcar la casilla y enviar el formulario constituye su consentimiento expreso y por
+                                    escrito (incluida la firma electrónica) para recibir esas comunicaciones.</li>
+                                <li>Si el formulario presenta casillas separadas para correo electrónico y para mensajes
+                                    de texto o llamadas, solo le contactaremos por los canales que usted haya marcado.
+                                </li>
+                                <li>Si no marca la casilla, no usaremos sus datos para enviarle publicidad.</li>
+                                <li>Guardamos un registro de su consentimiento: el texto que aceptó, la fecha y hora, el
+                                    evento donde se registró y los datos de contacto que proporcionó. Conservamos este
+                                    registro mientras usted reciba comunicaciones y por el tiempo que exija la ley
+                                    después de que se dé de baja.</li>
+                                <li>Solo la persona titular del correo o del número de teléfono puede dar este
+                                    consentimiento. No registre los datos de otra persona.</li>
+                            </ul>
+                            <h3>Cómo darse de baja en cualquier momento:</h3>
+                            <ul>
+                                <li>Correo electrónico: use el enlace &quot;Cancelar suscripción&quot; al final de
+                                    cualquier correo. Procesamos la baja en un máximo de 10 días laborables.</li>
+                                <li>Mensajes de texto: responda STOP (o BAJA) a cualquier mensaje. Recibirá una sola
+                                    confirmación y no le enviaremos más mensajes.</li>
+                                <li>Llamadas o cualquier canal: escríbanos al correo de privacidad indicado en la
+                                    sección 9.</li>
+                            </ul>
+                            <p>Darse de baja de mercadeo no afecta mensajes operacionales relacionados con una compra o
+                                un evento al que usted asista.</p>
+                        </div>
+                    </section>
+                    <section class="policy-section" id="seccion-5">
+                        <div class="section-heading"><span class="section-number">05 / 09</span>
+                            <h2>Con quién compartimos su información</h2>
+                        </div>
+                        <div class="section-content">
+                            <h3>Solo compartimos sus datos en estos casos:</h3>
+                            <ul>
+                                <li>Artistas de OD Entertainment y sus equipos de manejo, para que las promociones que
+                                    reciba provengan de los artistas que representamos.</li>
+                                <li>Proveedores de servicios que nos ayudan a operar, como plataformas de email
+                                    marketing, de mensajes de texto, de formularios y de almacenamiento en la nube.
+                                    Están obligados por contrato a usar sus datos solo para prestarnos ese servicio y a
+                                    protegerlos.</li>
+                                <li>Plataformas publicitarias (Meta, Google, TikTok), en formato cifrado, según se
+                                    describe en la sección 3.</li>
+                                <li>Promotores o socios de un evento específico, solo cuando sea necesario para la
+                                    operación de ese evento y bajo obligaciones de confidencialidad.</li>
+                                <li>Autoridades, cuando la ley, una orden judicial o un proceso legal nos lo exija.</li>
+                                <li>Transacciones corporativas: si OD Entertainment se fusiona, vende o reorganiza, sus
+                                    datos podrían transferirse a la entidad sucesora, que deberá respetar esta política.
+                                </li>
+                            </ul>
+                            <p>Nunca compartiremos su número de teléfono ni su consentimiento para mensajes de texto con
+                                terceros para que ellos le envíen sus propias promociones.</p>
+                        </div>
+                    </section>
+                    <section class="policy-section" id="seccion-6">
+                        <div class="section-heading"><span class="section-number">06 / 09</span>
+                            <h2>Retención, seguridad y menores de edad</h2>
+                        </div>
+                        <div class="section-content">
+                            <p>Retención. Conservamos sus datos mientras usted mantenga su suscripción. Si se da de
+                                baja, dejamos de enviarle mercadeo de inmediato y guardamos solo lo necesario para
+                                respetar su baja y cumplir con la ley. Eliminamos los registros inactivos por más de 5
+                                años.</p>
+                            <p>Seguridad. Protegemos su información con medidas razonables: acceso limitado al personal
+                                autorizado, contraseñas y autenticación en nuestras plataformas, y proveedores con
+                                estándares de seguridad reconocidos. Los formularios en papel se digitalizan y se
+                                destruyen de forma segura. Ningún sistema es 100% seguro; si ocurre una brecha que
+                                afecte sus datos, le notificaremos según lo requiera la ley aplicable, incluida la ley
+                                de Puerto Rico sobre notificación de brechas de seguridad.</p>
+                            <p>Menores de edad. El formulario está dirigido a personas de 18 años o más. No recopilamos
+                                a sabiendas datos de menores de 13 años. Si nos enteramos de que recibimos datos de un
+                                menor sin el consentimiento de su padre, madre o tutor, los eliminaremos.</p>
+                        </div>
+                    </section>
+                    <section class="policy-section" id="seccion-7">
+                        <div class="section-heading"><span class="section-number">07 / 09</span>
+                            <h2>Sus derechos</h2>
+                        </div>
+                        <div class="section-content">
+                            <h3>Usted puede, en cualquier momento y sin costo:</h3>
+                            <ul>
+                                <li>Retirar su consentimiento y darse de baja de cualquier canal (sección 4).</li>
+                                <li>Pedirnos una copia de los datos que tenemos sobre usted.</li>
+                                <li>Corregir datos incorrectos o incompletos.</li>
+                                <li>Pedir que eliminemos sus datos.</li>
+                            </ul>
+                            <p>Si reside en un estado de EE.UU. con leyes de privacidad propias (por ejemplo,
+                                California), puede tener derechos adicionales, como saber con quién compartimos sus
+                                datos y optar por no participar en publicidad dirigida. Atendemos estas solicitudes en
+                                un máximo de 45 días y no le discriminaremos por ejercer sus derechos. Podemos pedirle
+                                información para verificar su identidad antes de responder.</p>
+                        </div>
+                    </section>
+                    <section class="policy-section" id="seccion-8">
+                        <div class="section-heading"><span class="section-number">08 / 09</span>
+                            <h2>Fans en Latinoamérica</h2>
+                        </div>
+                        <div class="section-content">
+                            <p>Si usted se registró en un concierto en Latinoamérica, también le protege la ley de datos
+                                personales de su país. Puede ejercer los derechos de la sección 7 (en México y Perú se
+                                conocen como derechos ARCO: acceso, rectificación, cancelación y oposición). Si no está
+                                conforme con nuestra respuesta, puede presentar una queja ante la autoridad de su país.
+                            </p>
+                            <div class="table-scroll">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>País</th>
+                                            <th>Ley aplicable</th>
+                                            <th>Autoridad ante la que puede reclamar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>México</td>
+                                            <td>Ley Federal de Protección de Datos Personales en Posesión de los
+                                                Particulares (2025)</td>
+                                            <td>Secretaría Anticorrupción y Buen Gobierno</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Colombia</td>
+                                            <td>Ley 1581 de 2012 y Decreto 1377 de 2013</td>
+                                            <td>Superintendencia de Industria y Comercio (SIC)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Salvador</td>
+                                            <td>Ley para la Protección de Datos Personales (Decreto 144 de 2024)</td>
+                                            <td>Agencia de Ciberseguridad del Estado (ACE)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Guatemala</td>
+                                            <td>Sin ley general de datos personales; aplica el derecho constitucional a
+                                                la intimidad</td>
+                                            <td>Tribunales de Guatemala</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Costa Rica</td>
+                                            <td>Ley 8968 de Protección de la Persona frente al Tratamiento de sus Datos
+                                                Personales</td>
+                                            <td>Agencia de Protección de Datos de los Habitantes (PRODHAB)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Panamá</td>
+                                            <td>Ley 81 de 2019</td>
+                                            <td>Autoridad Nacional de Transparencia y Acceso a la Información (ANTAI)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Perú</td>
+                                            <td>Ley 29733 y su Reglamento</td>
+                                            <td>Autoridad Nacional de Protección de Datos Personales (Ministerio de
+                                                Justicia y Derechos Humanos)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Argentina</td>
+                                            <td>Ley 25.326</td>
+                                            <td>Agencia de Acceso a la Información Pública (AAIP)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chile</td>
+                                            <td>Ley 19.628 y, desde su entrada en vigor, Ley 21.719</td>
+                                            <td>Agencia de Protección de Datos Personales, una vez en funciones</td>
+                                        </tr>
+                                        <tr>
+                                            <td>República Dominicana</td>
+                                            <td>Ley 172-13</td>
+                                            <td>Tribunales (acción de hábeas data)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>Para México, esta política es nuestro aviso de privacidad integral. Para Colombia, es
+                                nuestra política de tratamiento de la información.</p>
+                            <p>Plazos de respuesta. Si la ley de su país fija un plazo más corto que el de la sección 7,
+                                responderemos dentro de ese plazo. Por ejemplo, en Colombia atendemos consultas en 10
+                                días hábiles y reclamos en 15 días hábiles.</p>
+                            <p>Transferencia internacional. OD Entertainment opera desde Puerto Rico y nuestros
+                                proveedores pueden almacenar los datos en Estados Unidos. Estos lugares pueden tener un
+                                nivel de protección distinto al de su país. Al marcar la casilla del formulario, usted
+                                autoriza que sus datos se transfieran y traten allí, siempre bajo las protecciones de
+                                esta política.</p>
+                            <p>Menores de edad. La regla de la sección 6 aplica en todos los países, aunque el concierto
+                                admita asistentes menores de 18 años.</p>
+                        </div>
+                    </section>
+                    <section class="policy-section" id="seccion-9">
+                        <div class="section-heading"><span class="section-number">09 / 09</span>
+                            <h2>Contacto y cambios a esta política</h2>
+                        </div>
+                        <div class="section-content">
+                            <h3>Para preguntas, solicitudes o para darse de baja, escríbanos a:</h3>
+                            <p>OD Entertainment Inc. • Puerto Rico • <a
+                                    href="mailto:info@odentertainmentinc.com">info@odentertainmentinc.com</a></p>
+                            <p>Podemos actualizar esta política. Publicaremos la versión vigente con su fecha de
+                                actualización en <a
+                                    href="https://www.porsimanananoestoy.com/privacypolicyOD">www.porsimanananoestoy.com/privacypolicyOD</a>.
+                                Si hacemos cambios importantes en cómo usamos sus datos, se lo notificaremos por correo
+                                antes de aplicarlos.</p>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap footer-inner"><span>© OD Entertainment Inc. · Puerto Rico</span><a class="backtop"
+                href="#inicio">Volver arriba ↑</a></div>
+    </footer>
+    <script>const links = [...document.querySelectorAll('.sidebar a')]; const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { links.forEach(a => a.classList.toggle('active', a.hash === '#' + entry.target.id)); } }) }, { rootMargin: '-15% 0px -65% 0px' }); document.querySelectorAll('.policy-section').forEach(s => observer.observe(s));</script>
+</body>
+
+</html>
