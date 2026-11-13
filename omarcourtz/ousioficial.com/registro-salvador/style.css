@@ -1,0 +1,381 @@
+
+/* =========================================
+   OMAR COURTZ - POR SI MAÑANA NO ESTOY
+   LANDING DE REGISTRO
+========================================= */
+
+
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background-color: #090817;
+}
+
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+
+  margin: 0;
+  background: transparent;
+
+  color: #fff;
+  font-family: Arial, sans-serif;
+
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* =========================================
+   2. FONDO FIJO
+========================================= */
+
+.background-fixed {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  background-image: url("assets/fondo-desktop.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+/* =========================================
+   3. ESTRUCTURA DESKTOP
+========================================= */
+
+
+.landing {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+
+  flex: 1 0 auto;
+
+  margin: 0 auto;
+  padding: 40px 6%;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+  gap: 5%;
+}
+
+
+
+/* =========================================
+   4. FORMULARIO TALLY
+========================================= */
+
+.formulario {
+  width: 100%;
+  max-width: 520px;
+  min-width: 0;
+
+  justify-self: center;
+  align-self: center;
+}
+
+.formulario iframe {
+  display: block;
+  width: 100%;
+
+  border: none;
+  background: transparent;
+}
+
+
+/* =========================================
+   5. COMPOSICIÓN GRÁFICA DESKTOP
+========================================= */
+
+.visual {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.composicion-desktop {
+  display: block;
+
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 75vh;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   6. ELEMENTOS EXCLUSIVOS MOBILE
+========================================= */
+
+.logo-mobile,
+.personaje-mobile {
+  display: none;
+}
+
+
+/* =========================================
+   7. PANTALLAS INTERMEDIAS
+========================================= */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+
+  .landing {
+    padding: 40px 4%;
+    gap: 4%;
+  }
+
+  .formulario {
+    max-width: 500px;
+  }
+
+  .composicion-desktop {
+    max-height: 70vh;
+  }
+
+}
+
+
+/* =========================================
+   8. VERSIÓN MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* FONDO MOBILE */
+
+  .background-fixed {
+    background-image: url("assets/fondo-mobile.webp");
+    background-position: center;
+  }
+
+
+  /* ESTRUCTURA */
+
+  .landing {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-height: auto;
+
+    margin: 0;
+    padding: 0 20px;
+
+    gap: 0;
+  }
+
+
+  /* REORDENAR ELEMENTOS */
+
+  .visual {
+    display: contents;
+  }
+
+
+  /* LOGO SUPERIOR */
+
+  .logo-mobile {
+    display: block;
+    order: 1;
+
+    width: 85%;
+    max-width: 350px;
+    height: auto;
+
+    margin: 45px auto 25px;
+  }
+
+
+  /* FORMULARIO */
+
+  .formulario {
+    display: block;
+    order: 2;
+
+    width: 100%;
+    max-width: 450px;
+
+    margin: 0 auto;
+    padding: 0;
+  }
+
+
+  /* PERSONAJE INFERIOR */
+
+  .personaje-mobile {
+    display: block;
+    order: 3;
+
+    width: 60%;
+    max-width: 420px;
+    height: auto;
+
+    margin: 25px auto 0;
+  }
+
+
+  /* OCULTAR COMPOSICIÓN DESKTOP */
+
+  .composicion-desktop {
+    display: none;
+  }
+
+.site-footer {
+  min-height: auto;
+  padding: 25px 20px 30px;
+
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+}
+
+
+/* =========================================
+   9. CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 380px) {
+
+  .landing {
+    padding: 0 15px;
+  }
+
+  .logo-mobile {
+    width: 90%;
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+
+  .personaje-mobile {
+    width: 95%;
+    margin-top: 20px;
+  }
+
+}
+
+
+
+
+/* =========================================
+   10. FOOTER - REDES Y PRIVACIDAD
+========================================= */
+
+
+
+.site-footer {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  min-height: 65px;
+
+  flex-shrink: 0;
+
+  padding: 12px 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: transparent;
+}
+
+
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links a,
+.privacy-link {
+  color: #d3c7e8;
+  text-decoration: none;
+  transition: color .2s ease, opacity .2s ease;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 30px;
+}
+
+.social-links svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.privacy-link {
+  font-size: 12px;
+  letter-spacing: .02em;
+}
+
+.social-links a:hover,
+.privacy-link:hover {
+  color: #b83ceb;
+}
+
+.social-links a:focus-visible,
+.privacy-link:focus-visible {
+  outline: 2px solid #c544f3;
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    padding: 28px 20px 32px;
+  }
+
+  .social-links {
+    gap: 24px;
+  }
+}
