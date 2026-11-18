@@ -253,7 +253,7 @@ const tourDatesLATAM = [
   {
     date: "NOV 28",
     city: "LIMA, PERÚ",
-    venue: "Arena 1",
+    venue: "Lurin Live",
     status: "soldout",
     labelStatus: "soldout"
   },
