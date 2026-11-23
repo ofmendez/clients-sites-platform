@@ -230,17 +230,15 @@ const tourDatesLATAM = [
     date: "NOV 20",
     city: "C. DE GUATEMALA, GUATEMALA",
     venue: "Explanada 5",
-    status: "tickets",
-    url: "https://www.ticketasa.gt/events/omar_courtz",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "NOV 21",
     city: "SAN JOSÉ, COSTA RICA",
     venue: "Anfiteatro Imperial",
-    status: "tickets",
-    url: "https://www.eticket.cr/eventos.aspx?idartista=1255",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "NOV 26",
