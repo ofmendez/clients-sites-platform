@@ -244,9 +244,8 @@ const tourDatesLATAM = [
     date: "NOV 26",
     city: "PANAMA CITY, PANAMA",
     venue: "Estadio Emilio Royo",
-    status: "tickets",
-    url: "https://panatickets.boletosenlinea.events/eventperformances.asp?evt=2700",
-    labelStatus: "newdate"
+    status: "soldout",
+    labelStatus: "soldout"
   },
   {
     date: "NOV 28",
